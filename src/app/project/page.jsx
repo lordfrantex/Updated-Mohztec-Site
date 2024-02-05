@@ -1,4 +1,4 @@
-import BootstrapClient from '@/components/bootstrapClient/BootstrapClient'
+import BootstrapClient from '../../components/bootstrapClient/BootstrapClient'
 import './project.scss'
 import Image from 'next/image'
 import Link from 'next/link'
