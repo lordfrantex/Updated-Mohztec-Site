@@ -1,0 +1,63 @@
+@use '../../../scss/helpers/_variables.scss' as * ;
+
+
+.quote-page {
+    // max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  
+    h1 {
+    font-family: YellowTail;
+    margin-bottom: 50px;
+      color: $complementary-color;
+      position: relative;
+
+      &::after{
+        content: "";
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+        width: 70px;
+        height: 3px;
+        border-radius: 50px;
+        background-color: $complementary-color;
+      }
+    }
+  
+    .quote-form {
+      display: flex;
+      flex-direction: column;
+  
+      label {
+        margin-bottom: 10px;
+      }
+  
+      input,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+  
+      button {
+        background-color: $brand-color;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+  .try{
+    margin-top: 150px;
+  }
+  .steps svg{
+color: $brand-color;
+  }

@@ -1,0 +1,77 @@
+@use '../../../scss/helpers/_mixins.scss' as *;
+@use '../../../scss/helpers/_variables.scss' as *;
+footer{
+color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(10, 10, 10, 0.925), rgba(15, 15, 20, 0.986)), url("/mohztec-images/solar3.jpg");
+padding: 15px;
+    .brand-logo{
+        height: 120px;
+        width: 120px;
+        margin: 20px 0;
+        background-color: white;
+        position: relative;
+    }
+   
+    .upper-col{
+        svg{
+            font-size: 50px;    
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    }
+    .subscribe{
+        .send{
+            background-color: white;
+            display: inline-flex;
+            border-radius: 200px;
+            overflow: hidden;
+
+            input{
+                padding: 12px;
+                background: transparent;
+                outline: none;
+                border: 1px solid transparent;
+                
+            }
+            span{
+                @include flex-center-center;
+                background-color: $brand-color;
+                padding: 12px;
+                svg{
+                font-size: 25px;
+                }
+            }
+
+        }
+    }
+    .social-icons{
+        display: flex;
+        gap: 12px;
+
+        span{
+            @include flex-center-center;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+
+            text-align: center;
+            background-color: white;
+            svg{
+                color: $brand-color;
+                transition: all .4s ease-in-out;
+                font-size: 25px;
+                &:hover{
+                    color: black;
+                }            
+            }
+        }
+    }
+}
+.copywrite{
+    background-color: $brand-color;
+color: white;
+
+}

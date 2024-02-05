@@ -1,0 +1,49 @@
+@use '../../../scss/helpers/variables.scss' as *;
+.home-achievements span {
+    padding: 15px 25px;
+    background-color: $complementary-color;
+    color: white;
+    font-size: 19px;
+    font-weight: 800;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+  .show-bar-container {
+    background-color: $brand-color;
+}
+
+
+
+.credible-points {
+    &span.round {
+        background-color: $complementary-color;
+        display: none;
+        padding: 12px 25px;
+        font-size: 19px;
+        color: white !important;
+        font-weight: 800;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+    }
+}
+
+.home-phone-complement-color {
+    color: $complementary-color;
+}
+
+.unit {
+    text-align: center;
+    color: $complementary-color !important;
+    p{
+        font-weight: 600;
+    }
+}
+
+.unit p.icon {
+    color: white !important;
+    border-radius: 50%;
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+
+}  

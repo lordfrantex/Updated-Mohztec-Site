@@ -1,0 +1,52 @@
+@use '../../scss/helpers/_mixins.scss' as * ;
+@use '../../scss/helpers/_variables.scss' as * ;
+
+.display-container{
+    background-image:  linear-gradient(rgba(0, 0, 255, 0.212),rgba(17, 16, 16, 0.514)), url(/mohztec-images/solar2.jpg);
+    margin-top: 90px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    @include flex-center-center();
+}
+
+.swiper-content {
+    padding: 60px 50px;
+    margin-top: 170px;
+    @media (max-width:400px){
+        &{
+            padding: 90px 20px;
+        }
+    }
+    .swiper-image{
+        height: 400px;
+        position: relative;
+
+    }
+}
+  
+  .swiper-desc {
+    h1{
+        color: white;
+        font-weight: 800;
+        line-height: 1.5;
+    }
+    .enquiry{
+        button{
+            margin: 15px;
+            display: inline-block;
+            width: 190px;
+            text-align: center;
+            border: 0;
+            outline: none;
+            padding: 15px;
+            background-color: $brand-color;
+        }
+        a{
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+
+        }
+    }
+  }

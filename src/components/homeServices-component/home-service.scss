@@ -1,0 +1,246 @@
+@use '../../../scss/helpers/_variables.scss' as *;
+@keyframes linear-transit {
+    from {
+      top: 50%;
+    }
+    to {
+      top: 25%;
+    }
+  }
+  .heading-texts{
+    h3{
+font-family: YellowTail;
+color: $complementary-color;
+font-size: 36px;
+    }
+    h4{
+font-size: 40px;
+font-weight: 600;
+    }
+  }
+  .home-achievements span {
+    padding: 15px 25px;
+    background-color: $complementary-color;
+    color: white;
+    font-size: 19px;
+    font-weight: 800;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+  
+  .home-about-image {
+    position: relative;
+  
+  }
+  
+  .home-about-image .side-image {
+    position: absolute;
+    animation: linear-transit 5s linear infinite alternate;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    transform: translate(-30%, -50%);
+    border: 9px solid white;
+  }
+  
+  .about-container {
+    background-image: url(/mohztec-images/ceo-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .about-image-vector{
+    position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("/mohztec-images/vector-1.png");
+    height: 105px;
+    width: 105px;
+    right: 0px;
+    rotate: 180deg;
+    top: 0%;
+    background-size: cover;
+    animation: rotateIt 10s linear infinite;
+   
+  }
+  .about-image{
+    border-radius: 50%;
+    border: 8px solid $complementary-color;
+    position: relative;
+   
+   img{
+    width: 100%;
+    border-radius: 50%;
+   }
+  }
+}
+  
+  .parent-experience {
+    position: relative;
+      .experience {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-81%);
+    border: 9px solid $complementary-color;
+    width: 250px;
+
+@media (max-width:700px){
+  &{
+    transform: translateY(0);
+  }
+}
+  }
+}
+  
+  .avater img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .services {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 15px;
+  }
+  .services::after {
+    content: "";
+    z-index: -10;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(7, 4, 104) 4.563%, rgb(14, 8, 36) 100%);
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+  }
+  .services:hover::after {
+    top: 0;
+  }
+  .services .thumbnail .thumbnail-image {
+    width: 50px;
+    display: block;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .services .service-details {
+    padding: 12px;
+  }
+  .services .service-details h4 {
+    text-align: left !important;
+  }
+  .services .service-details span {
+    color: black;
+  }
+  .services .service-details span span.round {
+    background-color: $complementary-color;
+    padding: 0px 5px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  .services:hover .thumbnail {
+    color: $complementary-color !important;
+  }
+  .services:hover .service-details,
+  .services .service-details a {
+    color: white !important;
+  }
+  .services:hover span {
+    color: white;
+  }
+  
+  .credible-points span.round {
+    background-color: $complementary-color;
+    padding: 0px 5px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  
+  .show-bar-container {
+    background-color: rgb(7, 4, 104);
+  }
+  
+  .credible-pointsspan.round {
+    background-color: $complementary-color;
+    display: none;
+    padding: 12px 25px;
+    font-size: 19px;
+    color: white !important;
+    font-weight: 800;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+  
+  .home-phone-complement-color {
+    color: $complementary-color;
+  }
+  
+  .unit {
+    text-align: center;
+    color: $complementary-color !important;
+  }
+  
+  .unit p.icon {
+    color: white !important;
+    border-radius: 50%;
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    background-color: rgb(7, 4, 104) !important;
+    color: white !important;
+  }
+  
+  .nav-pills .nav-link {
+    justify-content: center;
+    color: black;
+  }
+  
+  .home-training-container {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  @keyframes round-circle {
+    from {
+      rotate: 0deg;
+    }
+    to {
+      rotate: 360deg;
+    }
+  }
+ 
+  .home-training-container::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 250px;
+    top: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    background-image: url(/mohztec-images/vector-grid.jpg);
+    background-size: contain;
+    height: 250px;
+    mix-blend-mode: multiply;
+    transform-origin: 0% 50%;
+    animation-direction: normal;
+    animation: round-circle 10s linear infinite;
+  }

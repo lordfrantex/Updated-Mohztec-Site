@@ -1,0 +1,370 @@
+@use '../../../scss/helpers/_variables.scss' as *;
+@use '../../../scss/helpers/_mixins.scss' as *;
+
+.blog-header {
+    padding: 120px 10px;
+    background-image: radial-gradient(rgba(30, 43, 46, 0.815), rgba(17, 17, 20, 0.952)), url("/mohztec-images/magnifier-g86b337b98_1920.jpg");
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-header h3 {
+    color: white;
+    padding: 10px;
+    font-size: 60px;
+}
+
+.blog-header p {
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.blog-search {
+    border: 1px solid rgb(36, 32, 56);
+    width: 30%;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.blog-search input {
+    width: 87%;
+    padding: 5px 20px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.blog-search i {
+    text-align: center;
+    padding: 9px;
+    font-size: 20px;
+}
+
+.blog-filter select {
+    margin: 20px;
+    outline: 0;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 19px;
+}
+
+.blog-card {
+    border-radius: 19px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+
+    div {
+        overflow: hidden;
+    }
+}
+
+.blog-card:hover {
+    transform: scale(1.06);
+}
+
+.blog-card h4,
+.blog-card p,
+.blog-card button {
+    margin: 10px;
+}
+
+.blog-card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-card img {
+    width: 100%;
+}
+
+
+.blog-card span {
+    float: right;
+    padding: 15px;
+}
+
+.blog-card button {
+    padding: 3px 9px;
+    border: 1px solid rgb(131, 120, 120);
+    border-radius: 15px;
+    transition: .3s ease-in-out;
+}
+
+
+.blog-card a :hover {
+    background-color: rgb(38, 31, 41);
+    color: white;
+}
+
+
+
+
+/* Carousel swiper */
+.blog-swiper .swiper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.blog-swiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    height: 350px;
+}
+
+.blog-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+
+
+
+/* Technology Swiper */
+
+.technology .swiper {
+    width: 500px;
+}
+
+.technology .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 100%
+}
+
+.technology .swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.technology {
+    margin: 10px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tech-writeup {
+    flex: 1;
+    align-self: center;
+}
+
+.tech-writeup h4 {
+    text-align: center;
+    font-size: 36px;
+    // font-weight: 700;
+    color: $complementary-color;
+        font-family: YellowTail;
+}
+
+.tech-icons {
+    text-align: center;
+
+    p{
+        font-size: 26px;
+        font-weight: 600;
+        margin-top: 20px;
+        
+    }
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    margin-top: 12px;
+
+    svg{
+        font-size: 25px;
+        transition: .4s;
+        &:hover{
+            transform: scale(1.15);
+        }
+    }
+}
+}
+
+
+
+@media(max-width:600px) {
+    .blog-search {
+        width: 90%;
+    }
+
+    .blog-search input {
+        width: 80%;
+    }
+
+    .technology {
+        flex-direction: column;
+    }
+
+    .blog-card {
+        width: 100%;
+    }
+
+    .technology .swiper {
+        width: 100%;
+        margin: 10px 0;
+
+    }
+
+}
+
+/* Single Blog styling */
+.single-blog {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+
+}
+
+.blog-back {
+    margin: 160px 10px 20px 10px ;
+
+}
+
+.blog-back a {
+    padding: 10px;
+    background-color: $brand-color;
+    color: white;
+    border-radius: 50%;
+    transition: .4s ease-in-out;
+}
+
+.blog-back a:hover {
+    background-color: black;
+}
+
+.single-blog-right {
+    width: 70%;
+}
+
+.single-blog-left {
+    width: 30%;
+}
+
+.related-blog-title p {
+    margin-left: 9px;
+    font-size: 20px;
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.related-blog-title span {
+    margin-left: 9px;
+
+}
+
+.single-blog-left h4 {
+    font-size: 32px;
+    margin-bottom: 20px 0;
+}
+
+.related-blog {
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 5px 1px rgb(234, 239, 240);
+    cursor: pointer;
+    // padding: 10px;
+    transition: .4s ease-in-out all;
+    // margin: 10px;
+}
+
+.related-blog:hover {
+    transform: scale(1.05);
+}
+
+.related-blog-image {
+    width: 60%;
+}
+
+.email-update {
+    margin:  10px 0;
+
+    button{
+        background-color: $brand-color;
+        &:hover{
+        background-color: $brand-color;
+
+        }
+    }
+}
+
+.email-update input {
+    width: 100%;
+    outline: 1px solid rgb(85, 94, 97);
+    padding: 5px;
+    border: 0;
+    display: block;
+    
+}
+
+.single-blog-right .comment span {
+    background-color: rgb(46, 40, 51);
+    color: white;
+    margin-left: 10px;
+    display: inline-block;
+    width: 85px;
+    padding: 5px 7px;
+}
+
+.comment textarea {
+    width: 100%;
+    display: block;
+    padding: 20px 10px;
+    border-radius: 11px;
+    border: 1px solid rgb(115, 140, 141);
+
+}
+
+.comment-box {
+    position: relative;
+    margin: 50px 0;
+
+}
+
+.comment-box button.post-button {
+    display: block;
+    border-radius: 5px;
+    border: 0;
+    padding: 9px;
+    margin: 15px 0;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: $brand-color;
+    color: white;
+    width: 100%;
+
+}
+
+.comment-box button.post-button {
+}
+
+
+.single-blog-main-image{
+    height: 500px;
+    position: relative;
+}
+
+@media(max-width:1160px) {
+    .single-blog {
+        flex-direction: column;
+    }
+.single-blog-main-image{
+    height: 300px;
+}
+
+    .single-blog-right,
+    .single-blog-left {
+        width: 100%;
+    }
+}

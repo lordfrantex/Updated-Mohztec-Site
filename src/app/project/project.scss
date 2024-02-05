@@ -1,0 +1,72 @@
+// GENERAL PROJECT PAGE
+.project-container{
+    margin-top: 90px;
+}
+
+
+
+.project-card{
+    margin: 30px auto;
+    .project-image{
+        max-width: 100%;
+        height: 350px;
+        position: relative;
+        overflow: hidden;
+        img{
+            transition: .5s ease-in-out;
+
+        }
+        &:hover img{
+        // transition: .5s ease-in-out all;
+
+            transform: scale(1.05);
+            opacity: .95;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SINGLE PROJECT PAGE STYLE
+
+.parent{
+    margin-top: 100px;
+    .child{
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        padding: 15px;
+        margin: 30px auto;
+        background-color: rgb(237, 233, 241);
+        &:nth-child(2n){
+           flex-direction: row-reverse;
+        }
+        @media (max-width:400px){
+            &{
+                flex-direction: column;
+            }
+            &:nth-child(2n){
+                flex-direction: column;
+             }
+        }
+    }
+}
