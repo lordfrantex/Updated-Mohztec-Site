@@ -24,7 +24,7 @@ const Blog = async ({ searchParams }) => {
     const blogs = blog.length > 0 && (
         blog?.map(({ imgURL, title, description, id, createdAt, author }, index) => {
             return (
-                <div className="blog-card col-12 col-md-6 col-lg-4">
+                <div key={id} className="blog-card col-12 col-md-6 col-lg-4">
                     <div className="border rounded-5 ">
                         <img src={imgURL} alt={title} />
                         <h4 className='mx-2'><strong>{title}</strong></h4>

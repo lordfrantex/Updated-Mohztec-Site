@@ -257,7 +257,7 @@ const HomeServices = () => {
                                 <p data-aos="fade-up">
                                     Under the leadership of Moses Okocha, Mohztec Technologies has thrived as a beacon of innovation and sustainability. With a strategic vision that extends beyond industry norms,
                                     He has propelled the company towards new heights, fostering a culture of creativity, collaboration, and continuous improvement. Moses is not just a CEO, He is a visionary with a
-                                    keen understanding of the broader social and environmental landscape. Outside the boardroom, He's is actively involved in community initiatives, and championing causes that align  the Company's values of making a positive impact.
+                                    keen understanding of the broader social and environmental landscape. Outside the boardroom, He&apos;s is actively involved in community initiatives, and championing causes that align  the Company&apos;s values of making a positive impact.
                                 </p>
                                 <h3 data-aos="fade-up">Mr. Moses Okocha</h3>
                                 <h5 data-aos="fade-up">+234 34500983</h5>

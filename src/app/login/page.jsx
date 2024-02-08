@@ -11,7 +11,7 @@ import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import toast from 'react-hot-toast'
 
-const page = () => {
+const Page = () => {
     const { data, status } = useSession()
     const router = useRouter()
     status === 'loading' && <div>Loading...</div>
@@ -101,7 +101,7 @@ const page = () => {
                                         <FontAwesomeIcon icon={faGoogle} width='30px' />
                                     </span>
                                 </p>
-                                <Link href='/register'> <p className='text-center text-white'>Don't have an account? <span className='text-decoration-underline'> Register Here</span></p></Link>
+                                <Link href='/register'> <p className='text-center text-white'>Dont have an account? <span className='text-decoration-underline'> Register Here</span></p></Link>
                             </div>
 
                         </form>
@@ -113,4 +113,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

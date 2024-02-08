@@ -1,10 +1,11 @@
 'use client'
+import Image from 'next/image'
 import '../admin-blog.scss'
 
 import { useEffect, useRef, useState } from "react"
 import toast from 'react-hot-toast'
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
     const { slug } = params
     const fetchBlog = async (slug) => {
         try {
@@ -123,12 +124,12 @@ const page = ({ params }) => {
             <form onSubmit={handleSubmit}>
                 <input type="text" value={blog.title} name="title" onChange={handleChange} placeholder="Enter Blog's Title" />
                 <input type="file" ref={imgRef} onChange={handleChange} accept='image/*' />
-                <img src={editImg ? editImg : blog.imgURL} width='100px' height='100px' alt="" />
+                <Image src={editImg ? editImg : blog.imgURL} width={100} height={100} alt="" />
 
                 <div className='my-3'>
                     <label>
                         <select value={blog.category} onChange={handleChange}>
-                            <option value={""}>Select Blog's Category</option>
+                            <option value={""}>Select Blog&apos;s Category</option>
                             <option>Solar Installation</option>
                             <option>CCTV Installation</option>
                             <option>IoT Installation</option>
@@ -145,4 +146,4 @@ const page = ({ params }) => {
     )
 }
 
-export default page
+export default Page

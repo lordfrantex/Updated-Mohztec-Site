@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import '../admin-project.scss';
 
 import { useState, useEffect } from "react"
@@ -110,12 +111,12 @@ const CreateProject = () => {
             <form onSubmit={handleSubmit} className="">
                 <input type="text" value={project.title} name="title" onChange={handleChange} placeholder='Enter Title' />
                 <input type="file" multiple name="img" onChange={handleChange} accept='image/*' />
-                <img src={project.img} width='100px' height='100px' alt="" />
+                <Image src={project.img} width={100} height={100} alt="" />
 
                 <div className='my-3'>
                     <label>
                         <select value={project.category} onChange={handleChange}>
-                            <option value={""}>Select Project's Category</option>
+                            <option value={""}>Select Project&apos;s Category</option>
                             <option>Solar </option>
                             <option>CCTV </option>
                             <option>IoT </option>

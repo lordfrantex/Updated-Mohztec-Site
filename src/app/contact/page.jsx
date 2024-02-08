@@ -7,16 +7,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Title from '@/components/title-component/Title'
 const Contact = () => {
 
-    const [formData, setFormData] = useState(JSON.parse(localStorage.getItem('contact')) || [])
-    useEffect(() => {
-        localStorage.setItem('contact', JSON.stringify(formData))
-    }, [formData])
+    // const [formData, setFormData] = useState(JSON.parse(localStorage.getItem('contact')) || [])
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+        phone: ""
+    })
+    // useEffect(() => {
+    //     localStorage.setItem('contact', JSON.stringify(formData))
+    // }, [formData])
 
     const handleForm = (e) => { setFormData(prev => ({ ...prev, [e.target.name]: e.target.value })) }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
+        return
         // Instead of logging to the console, i'll perform an emailJs integration.
 
     }

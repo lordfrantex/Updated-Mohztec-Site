@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import './create-blog.scss'
 
 import { useRef, useState } from "react"
@@ -117,13 +118,12 @@ const CreateBlog = () => {
             <form onSubmit={handleSubmit}>
                 <input type="text" value={blog.title} name="title" onChange={handleChange} placeholder="Enter Blog's Title" />
                 <input type="file" ref={imgRef} onChange={handleChange} accept='image/*' />
-                {/* <img src={data.imgURL} width='100px' height='100px' alt="" /> */}
-                <img src={blog.img} width='100px' height='100px' alt="" />
+                <Image src={blog.img} width={100} height={100} alt="" />
 
                 <div className='my-3'>
                     <label>
                         <select value={blog.category} onChange={handleChange}>
-                            <option value={""}>Select Blog's Category</option>
+                            <option value={""}>Select Blog&apos;s Category</option>
                             <option>Solar Installation</option>
                             <option>CCTV Installation</option>
                             <option>IoT Installation</option>

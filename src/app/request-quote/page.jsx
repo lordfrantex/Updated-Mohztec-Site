@@ -10,7 +10,7 @@ import { faMessage } from '@fortawesome/free-regular-svg-icons';
 import toast from 'react-hot-toast';
 
 
-const page = () => {
+const RequestQuote = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -107,4 +107,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default RequestQuote;

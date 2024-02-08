@@ -1,6 +1,7 @@
-import BootstrapClient from '../../components/bootstrapClient/BootstrapClient'
+// import BootstrapClient from '@/components/bootstrapClient/BootstrapClient'
 import './project.scss'
 import Image from 'next/image'
+// import BootstrapClient from '../../components/bootstrapClient/BootstrapClient'
 import Link from 'next/link'
 import ProjectOptions from './ProjectOptions'
 
@@ -19,6 +20,7 @@ export const getProjects = async (category) => {
 // export async function generateMetadata({ searchParams }) {
 //     const res = await fetch(`http://localhost:3000/api/project/${params.name}`, { cache: "no-store" });
 //     const { item } = await res.json()
+//     console.log(item);
 //     if (!item) return {
 //         title: "Not Found",
 //         description: "The Page is not found"

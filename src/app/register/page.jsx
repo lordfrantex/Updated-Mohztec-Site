@@ -9,7 +9,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import toast from 'react-hot-toast'
-const page = () => {
+const Page = () => {
     const router = useRouter()
     const [loading, setLoading] = useState(false)
 
@@ -109,4 +109,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

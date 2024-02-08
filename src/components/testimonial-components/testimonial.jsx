@@ -45,7 +45,7 @@ const Testimonial = () => {
                     modifier: 1,
                     slideShadows: true,
                 }}
-                pagination={true}
+                // pagination={true}
                 modules={[EffectCoverflow, Autoplay, Pagination]}
                 className="container"
             >

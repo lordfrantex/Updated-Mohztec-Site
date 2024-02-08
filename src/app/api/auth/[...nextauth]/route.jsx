@@ -17,8 +17,8 @@ const handler = NextAuth({
             profile(profile) {
                 let role;
                 if (
-                    profile.email === "abc@gmail.com" ||
-                    profile.email === "xyz@gmail.com"
+                    profile.email === "lordfranktex@gmail.com" ||
+                    profile.email === "mosesokocha@gmail.com"
                 ) {
                     role = "admin";
                 } else {
@@ -29,8 +29,21 @@ const handler = NextAuth({
                     name: profile.name,
                     email: profile.email,
                     image: profile.picture,
-                    role: profile.role || role,
+                    role: role,
                 };
+
+                async function updateDB() {
+                    // Update the user's role in the database
+                    const update = await prisma.user.update({
+                        where: {
+                            email: user.email
+                        },
+                        data: { role: user.role },
+                    });
+
+                }
+                updateDB()
+
                 return user;
             },
 
@@ -75,7 +88,7 @@ const handler = NextAuth({
 
                 // return user if password match, assign role based on email
                 let role
-                if (user.email == "john@gmail.com") {
+                if (user.email === "lordfranktex@gmail.com" || user.email === "mosesokocha@gmail.com") {
                     role = "admin"
                 } else {
                     role = "user"
@@ -110,6 +123,7 @@ const handler = NextAuth({
             session.user.role = token.role
             return session
         }
+
     },
 
     session: {

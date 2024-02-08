@@ -1,9 +1,10 @@
 "use client"
+import Image from 'next/image'
 import '../admin-project.scss'
 import { useEffect, useRef, useState } from "react"
 import toast from 'react-hot-toast'
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
 
     const [isLoading, setLoading] = useState(false)
     const [editImg, setEditImg] = useState("")
@@ -104,12 +105,12 @@ const page = ({ params }) => {
             <form onSubmit={handleSubmit}>
                 <input type="text" value={project.title} name="title" onChange={handleChange} placeholder="Enter project's Title" />
                 <input type="file" ref={imgRef} onChange={handleChange} accept='image/*' />
-                <img src={editImg ? editImg : project.imgURL} width='100px' height='100px' alt="" />
+                <Image src={editImg ? editImg : project.imgURL} width={100} height={100} alt="" />
 
                 <div className='my-3'>
                     <label>
                         <select value={project.category} onChange={handleChange}>
-                            <option value={""}>Select project's Category</option>
+                            <option value={""}>Select project&apos;s Category</option>
                             <option>Solar Installation</option>
                             <option>CCTV Installation</option>
                             <option>IoT Installation</option>
@@ -125,6 +126,6 @@ const page = ({ params }) => {
     )
 }
 
-export default page
+export default Page
 
 

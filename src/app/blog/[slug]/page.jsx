@@ -66,7 +66,7 @@ const SingleBlog = async ({ params }) => {
 
     const mapRelatedBlogs = related?.map((blog, index) => {
         return (
-            <Link href={`/blog/${blog.id}`} className="related-blog">
+            <Link key={blog.id} href={`/blog/${blog.id}`} className="related-blog">
                 <div className="related-blog-image">
                     <img src={blog.imgURL} alt="" />
                 </div>

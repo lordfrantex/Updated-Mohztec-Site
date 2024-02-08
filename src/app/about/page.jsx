@@ -72,7 +72,7 @@ const About = () => {
                         <div className="col-12 col-md-4 col-lg-3">
                             <div className="team-card p-3">
                                 <div className="team-card-image">
-                                    <img src="/mohztec-images/moses.jpg" alt="" />
+                                    <Image fill src="/mohztec-images/moses.jpg" alt="" />
                                 </div>
                                 <p>Name: Moses Okocha</p>
                                 <p className="title">Team Leader / C.E.O</p>
@@ -82,7 +82,7 @@ const About = () => {
 
                             <div className="team-card p-3">
                                 <div className="team-card-image">
-                                    <img src="/mohztec-images/man1.jpg" alt="" />
+                                    <Image fill src="/mohztec-images/man1.jpg" alt="" />
                                 </div>
                                 <p>Name: Moses Okocha</p>
                                 <p className="title">Team Leader / C.E.O</p>
@@ -92,7 +92,7 @@ const About = () => {
 
                             <div className="team-card p-3">
                                 <div className="team-card-image">
-                                    <img src="/mohztec-images/man2.jpg" alt="" />
+                                    <Image fill src="/mohztec-images/man2.jpg" alt="" />
                                 </div>
                                 <p>Name: Moses Okocha</p>
                                 <p className="title">Team Leader / C.E.O</p>
@@ -102,7 +102,7 @@ const About = () => {
 
                             <div className="team-card p-3">
                                 <div className="team-card-image">
-                                    <img src="/mohztec-images/man2.jpg" alt="" />
+                                    <Image fill src="/mohztec-images/man2.jpg" alt="" />
                                 </div>
                                 <p>Name: Moses Okocha</p>
                                 <p className="title">Team Leader / C.E.O</p>
