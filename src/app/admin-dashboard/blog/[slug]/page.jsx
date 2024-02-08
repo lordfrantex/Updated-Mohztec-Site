@@ -9,7 +9,8 @@ const Page = ({ params }) => {
     const { slug } = params
     const fetchBlog = async (slug) => {
         try {
-            const res = await fetch(`http://localhost:3000/api/blog/${slug}`, { cache: "no-cache" });
+            // const res = await fetch(`http://localhost:3000/api/blog/${slug}`, { cache: "no-cache" });
+            const res = await fetch(`${process.env.NEXTAUTH_URL}/api/blog/${slug}`, { cache: "no-cache" });
             const { item: data } = await res.json()
             setBlog(data)
         } catch (error) {
@@ -97,7 +98,8 @@ const Page = ({ params }) => {
 
             }
 
-            const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {
+            // const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {
+            const res = await fetch(`${process.env.NEXTAUTH_URL}/api/blog/${slug}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-type': 'application/json'

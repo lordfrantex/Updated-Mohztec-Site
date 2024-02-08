@@ -10,7 +10,8 @@ import TypeWriter, { SwiperComponent } from './TypeWriter';
 
 const fetchBlog = async (data) => {
     try {
-        const res = await fetch(`http://localhost:3000/api/blog?category=${data || ""}`, { cache: "no-cache" });
+        // const res = await fetch(`http://localhost:3000/api/blog?category=${data || ""}`, { cache: "no-cache" });
+        const res = await fetch(`${process.env.NEXTAUTH_URL}/api/blog?category=${data || ""}`, { cache: "no-cache" });
         return res.json()
     } catch (error) {
         console.log(error);
@@ -21,7 +22,7 @@ const fetchBlog = async (data) => {
 const Blog = async ({ searchParams }) => {
     const { category } = searchParams
     const blog = await fetchBlog(category)
-    const blogs = blog.length > 0 && (
+    const blogs = blog?.length > 0 && (
         blog?.map(({ imgURL, title, description, id, createdAt, author }, index) => {
             return (
                 <div key={id} className="blog-card col-12 col-md-6 col-lg-4">

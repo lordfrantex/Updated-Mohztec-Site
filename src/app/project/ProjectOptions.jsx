@@ -10,7 +10,7 @@ const ProjectOptions = () => {
 
     const handleChange = (e) => {
         setOption(e.target.value)
-        router.push(`http://localhost:3000/project?category=${e.target.value}`)
+        router.push(`${process.env.NEXTAUTH_URL}/project?category=${e.target.value}`)
     }
     return (
         <div className="text-center">

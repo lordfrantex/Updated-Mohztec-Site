@@ -17,7 +17,8 @@ const DeleteBlogComponent = ({ id }) => {
         // Perform the delete operation here
 
         try {
-            const response = await fetch(`http://localhost:3000/api/blog/${id}`, {
+            const response = await fetch(`${process.env.NEXTAUTH_URL}/api/blog/${id}`, {
+                // const response = await fetch(`http://localhost:3000/api/blog/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

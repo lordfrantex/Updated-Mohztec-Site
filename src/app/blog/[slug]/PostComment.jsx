@@ -35,7 +35,8 @@ const PostComment = ({ slug }) => {
         const fetchBlog = async (slug) => {
             try {
 
-                const res = await fetch(`http://localhost:3000/api/blog/blogComments/${slug}`, { cache: "no-cache" })
+                // const res = await fetch(`http://localhost:3000/api/blog/blogComments/${slug}`, { cache: "no-cache" })
+                const res = await fetch(`${process.env.NEXTAUTH_URL}/api/blog/blogComments/${slug}`, { cache: "no-cache" })
                 const data = await res.json()
                 setBlogComment(data)
                 return data
@@ -49,7 +50,7 @@ const PostComment = ({ slug }) => {
     const postBlogComment = async (slug, email, comment) => {
         try {
             setLoading(true)
-            const res = await fetch(`http://localhost:3000/api/blog/blogComments/${slug}`, {
+            const res = await fetch(`${process.env.NEXTAUTH_URL}/api/blog/blogComments/${slug}`, {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
@@ -113,7 +114,7 @@ export const DeleteComment = ({ userEmail, slug, commentId, setBlogComment }) =>
         try {
 
             setCommentLoading(true)
-            const res = await fetch(`http://localhost:3000/api/blog/blogComments/${slug}`, {
+            const res = await fetch(`${process.env.NEXTAUTH_URL}/api/blog/blogComments/${slug}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-type': 'application/json'

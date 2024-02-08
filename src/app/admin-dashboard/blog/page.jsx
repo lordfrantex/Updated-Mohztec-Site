@@ -5,7 +5,8 @@ import toast from "react-hot-toast";
 import DeleteBlogComponent from "./DeleteBlogComponent";
 const fetchBlog = async () => {
     try {
-        const res = await fetch(`http://localhost:3000/api/blog`, { cache: "no-cache" });
+        // const res = await fetch(`http://localhost:3000/api/blog`, { cache: "no-cache" });
+        const res = await fetch(`${process.env.NEXTAUTH_URL}/api/blog`, { cache: "no-cache" });
         return res.json()
     } catch (error) {
         console.log(error);

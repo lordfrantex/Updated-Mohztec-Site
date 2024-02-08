@@ -10,7 +10,8 @@ const CreateProject = () => {
 
     const [data, setData] = useState([])
     const fetchProject = async () => {
-        const res = await fetch("http://localhost:3000/api/project")
+        // const res = await fetch("http://localhost:3000/api/project")
+        const res = await fetch(`${process.env.NEXTAUTH_URL}/api/project`)
         const project = await res.json()
         setData(project)
     }
@@ -72,7 +73,8 @@ const CreateProject = () => {
         setLoading(true)
         try {
 
-            const res = await fetch('http://localhost:3000/api/project', {
+            // const res = await fetch('http://localhost:3000/api/project', {
+            const res = await fetch(`${process.env.NEXTAUTH_URL}/api/project`, {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'

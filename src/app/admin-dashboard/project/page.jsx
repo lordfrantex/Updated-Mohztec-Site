@@ -5,7 +5,8 @@ import toast from "react-hot-toast";
 // import DeleteProjectComponent from "./DeleteProjectComponent";
 const fetchProject = async () => {
   try {
-    const res = await fetch(`http://localhost:3000/api/project`, { cache: "no-cache" });
+    // const res = await fetch(`http://localhost:3000/api/project`, { cache: "no-cache" });
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/project`, { cache: "no-cache" });
     return res.json()
   } catch (error) {
     console.log(error);

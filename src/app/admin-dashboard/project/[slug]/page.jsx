@@ -14,7 +14,8 @@ const Page = ({ params }) => {
     const { slug } = params
     const fetchProject = async (slug) => {
         try {
-            const res = await fetch(`http://localhost:3000/api/project/${slug}`, { cache: "no-cache" });
+            // const res = await fetch(`http://localhost:3000/api/project/${slug}`, { cache: "no-cache" });
+            const res = await fetch(`${process.env.NEXTAUTH_URL}/api/project/${slug}`, { cache: "no-cache" });
             const { item: data } = await res.json()
             setProject(data)
         } catch (error) {
@@ -78,7 +79,8 @@ const Page = ({ params }) => {
                 sendProject = { category, title, description, editImg, publicId: img }
 
             }
-            const res = await fetch(`http://localhost:3000/api/project/${slug}`, {
+            // const res = await fetch(`http://localhost:3000/api/project/${slug}`, {
+            const res = await fetch(`${process.env.NEXTAUTH_URL}/api/project/${slug}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-type': 'application/json'
