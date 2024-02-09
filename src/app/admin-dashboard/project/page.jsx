@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 const fetchProject = async () => {
   try {
     // const res = await fetch(`http://localhost:3000/api/project`, { cache: "no-cache" });
-    const res = await fetch(`${process.env.https://mohztec-technologies.onrender.com}/api/project`, { cache: "no-cache" });
+    const res = await fetch(`${process.env.BASE_URL}/api/project`, { cache: "no-cache" });
     return res.json()
   } catch (error) {
     console.log(error);

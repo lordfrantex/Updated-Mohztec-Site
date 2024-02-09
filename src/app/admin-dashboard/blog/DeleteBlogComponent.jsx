@@ -17,39 +17,39 @@ const DeleteBlogComponent = ({ id }) => {
         // Perform the delete operation here
 
         try {
-            const response = await fetch(`${process.env.https://mohztec-technologies.onrender.com}/api/blog/${id}`, {
+            const response = await fetch(`${process.env.BASE_URL}/api/blog/${id}`, {
                 // const response = await fetch(`http://localhost:3000/api/blog/${id}`, {
                 method: 'DELETE',
                 headers: {
-                'Content-Type': 'application/json',
-            },
+                    'Content-Type': 'application/json',
+                },
             });
-        toast.success("Blog Deleted Successfully.")
-    } catch (error) {
-        console.log(error);
-    }
+            toast.success("Blog Deleted Successfully.")
+        } catch (error) {
+            console.log(error);
+        }
 
-    router.refresh()
-    // Close the modal after deletion
-    setIsModalOpen(false);
-};
+        router.refresh()
+        // Close the modal after deletion
+        setIsModalOpen(false);
+    };
 
-const handleModalClose = () => {
-    // Close the modal when the cancel button or overlay is clicked
-    setIsModalOpen(false);
-};
+    const handleModalClose = () => {
+        // Close the modal when the cancel button or overlay is clicked
+        setIsModalOpen(false);
+    };
 
-return (
-    <>    <button className="btn  btn-primary btn-sm me-2" onClick={handleDeleteClick}>Delete</button>
-        <DeleteConfirmationModal
-            isOpen={isModalOpen}
-            onClose={handleModalClose}
-            onDelete={handleDeleteConfirm}
-            id={id}
-        />
-    </>
+    return (
+        <>    <button className="btn  btn-primary btn-sm me-2" onClick={handleDeleteClick}>Delete</button>
+            <DeleteConfirmationModal
+                isOpen={isModalOpen}
+                onClose={handleModalClose}
+                onDelete={handleDeleteConfirm}
+                id={id}
+            />
+        </>
 
-)
+    )
 }
 
 export default DeleteBlogComponent

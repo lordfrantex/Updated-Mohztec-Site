@@ -10,8 +10,8 @@ import TypeWriter, { SwiperComponent } from './TypeWriter';
 
 const fetchBlog = async (data) => {
     try {
-        // const res = await fetch(`http://localhost:3000/api/blog?category=${data || ""}`, { cache: "no-cache" });
-        const res = await fetch(`${process.env.https://mohztec-technologies.onrender.com}/api/blog?category=${data || ""}`, { cache: "no-cache" });
+        const res = await fetch(`${process.env.process.env.BASE_URL}/api/blog?category=${data || ""}`, { cache: "no-cache" });
+        // const res = await fetch(`${process.env.process.env.BASE_URL}/api/blog?category=${data || ""}`, { cache: "no-cache" });
         return res.json()
     } catch (error) {
         console.log(error);

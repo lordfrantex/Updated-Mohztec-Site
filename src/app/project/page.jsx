@@ -5,11 +5,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ProjectOptions from './ProjectOptions'
 
-
+// console.log("THis is the process", process.env.NEXTAUTH_URL)
 
 export const getProjects = async (category) => {
+    const url = `${process.env.process.env.BASE_URL}/api/project?category=${category || ""}`
+
     try {
-        const res = await fetch(`${process.env.https://mohztec-technologies.onrender.com}/api/project?category=${category || ""}`, { cache: 'no-store' })
+        const res = await fetch(url, { cache: "no-cache" });
+
+        // const res = await fetch(`${url}/api/project?category=${category || ""}`, { cache: 'no-store' })
         return res.json()
     } catch (error) {
         console.log(error);
@@ -37,7 +41,7 @@ export const getProjects = async (category) => {
 const Projects = async ({ searchParams }) => {
     const { category } = searchParams
     const project = await getProjects(category)
-    const mapProjects = project.length > 0 && project.map((project, index) => {
+    const mapProjects = project?.length > 0 && project.map((project, index) => {
         return (
             // <Link href={`/project/${project.id}`} className='container' key={project.id}>
             <Link href={`#`} className='container ' key={project.id}>

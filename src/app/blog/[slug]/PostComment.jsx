@@ -36,7 +36,7 @@ const PostComment = ({ slug }) => {
             try {
 
                 // const res = await fetch(`http://localhost:3000/api/blog/blogComments/${slug}`, { cache: "no-cache" })
-                const res = await fetch(`${process.env.https://mohztec-technologies.onrender.com}/api/blog/blogComments/${slug}`, { cache: "no-cache" })
+                const res = await fetch(`${process.env.BASE_URL}/api/blog/blogComments/${slug}`, { cache: "no-cache" })
                 const data = await res.json()
                 setBlogComment(data)
                 return data
@@ -50,54 +50,54 @@ const PostComment = ({ slug }) => {
     const postBlogComment = async (slug, email, comment) => {
         try {
             setLoading(true)
-            const res = await fetch(`${process.env.https://mohztec-technologies.onrender.com}/api/blog/blogComments/${slug}`, {
+            const res = await fetch(`${process.env.BASE_URL}/api/blog/blogComments/${slug}`, {
                 method: 'POST',
                 headers: {
-                'Content-type': 'application/json'
-            },
+                    'Content-type': 'application/json'
+                },
                 body: JSON.stringify({ comment, email, slug })
             })
-        const data = await res.json()
-        setBlogComment(data)
-        setComment("")
+            const data = await res.json()
+            setBlogComment(data)
+            setComment("")
 
-        setLoading(false)
-    } catch (error) {
-        console.log(error);
-        setLoading(false)
+            setLoading(false)
+        } catch (error) {
+            console.log(error);
+            setLoading(false)
 
-    }
-}
-
-
-
-return (
-    <>
-
-        <textarea name="" onChange={(e) => setComment(e.target.value)} value={comment} placeholder="Add a comment"></textarea>
-        <button className="post-button" disabled={loading} onClick={() => email ? postBlogComment(slug, email, comment) : router.push("/login")}>Post</button >
-
-        {/* <small onClick={() => redirect("/login?callbackUrl=/blog")}>Redirect</small>s */}
-        {
-            blogComment.map(comment => {
-                return (
-                    <div className="blog-review-card" key={comment.id} >
-                        {
-                            comment?.user?.image ?
-                                <Image height={30} width={30} className="rounded-circle" src={comment?.user?.image} alt="" />
-                                : <Image height={30} width={30} className="rounded-circle" src="/mohztec-images/profile.jpg" />
-                        }
-                        < h5 > {comment.user.name}</h5 >
-                        <p>{comment.text}</p>
-                        <DeleteComment slug={slug} userEmail={comment?.user?.email} commentId={comment.id} setBlogComment={setBlogComment} />
-
-                        <hr />
-                    </div>
-                )
-            })
         }
-    </>
-)
+    }
+
+
+
+    return (
+        <>
+
+            <textarea name="" onChange={(e) => setComment(e.target.value)} value={comment} placeholder="Add a comment"></textarea>
+            <button className="post-button" disabled={loading} onClick={() => email ? postBlogComment(slug, email, comment) : router.push("/login")}>Post</button >
+
+            {/* <small onClick={() => redirect("/login?callbackUrl=/blog")}>Redirect</small>s */}
+            {
+                blogComment.map(comment => {
+                    return (
+                        <div className="blog-review-card" key={comment.id} >
+                            {
+                                comment?.user?.image ?
+                                    <Image height={30} width={30} className="rounded-circle" src={comment?.user?.image} alt="" />
+                                    : <Image height={30} width={30} className="rounded-circle" src="/mohztec-images/profile.jpg" />
+                            }
+                            < h5 > {comment.user.name}</h5 >
+                            <p>{comment.text}</p>
+                            <DeleteComment slug={slug} userEmail={comment?.user?.email} commentId={comment.id} setBlogComment={setBlogComment} />
+
+                            <hr />
+                        </div>
+                    )
+                })
+            }
+        </>
+    )
 }
 
 
@@ -114,32 +114,32 @@ export const DeleteComment = ({ userEmail, slug, commentId, setBlogComment }) =>
         try {
 
             setCommentLoading(true)
-            const res = await fetch(`${process.env.https://mohztec-technologies.onrender.com}/api/blog/blogComments/${slug}`, {
+            const res = await fetch(`${process.env.BASE_URL}/api/blog/blogComments/${slug}`, {
                 method: 'DELETE',
                 headers: {
-                'Content-type': 'application/json'
-            },
+                    'Content-type': 'application/json'
+                },
                 body: JSON.stringify({ commentId, email, slug })
             })
-        const data = await res.json()
-        setBlogComment(data)
-        setCommentLoading(false)
+            const data = await res.json()
+            setBlogComment(data)
+            setCommentLoading(false)
 
-    } catch (error) {
-        console.log(error);
-        setCommentLoading(false)
+        } catch (error) {
+            console.log(error);
+            setCommentLoading(false)
 
-    }
-}
-return (
-    <div>
-        {
-            userEmail === email &&
-            <button className="p-1 rounded-2 border btn" onClick={() => handleDelete(email, commentId, slug)} disabled={commentLoading}> <FontAwesomeIcon icon={faTrash} /></button>
         }
+    }
+    return (
+        <div>
+            {
+                userEmail === email &&
+                <button className="p-1 rounded-2 border btn" onClick={() => handleDelete(email, commentId, slug)} disabled={commentLoading}> <FontAwesomeIcon icon={faTrash} /></button>
+            }
 
-    </div>
-)
+        </div>
+    )
 }
 
 

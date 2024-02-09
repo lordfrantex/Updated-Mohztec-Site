@@ -10,7 +10,7 @@ const ProjectOptions = () => {
 
     const handleChange = (e) => {
         setOption(e.target.value)
-        router.push(`${process.env.https://mohztec-technologies.onrender.com}/project?category=${e.target.value}`)
+        router.push(`${process.env.BASE_URL}/project?category=${e.target.value}`)
     }
     return (
         <div className="text-center">
