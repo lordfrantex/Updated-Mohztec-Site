@@ -29,7 +29,6 @@ export async function generateMetadata({ params }) {
 const fetchBlog = async (blogSlug) => {
     try {
 
-        // const res = await fetch(`http://localhost:3000/api/blog/${blogSlug}`, { cache: "no-store" });
         const res = await fetch(`${process.env.BASE_URL}/api/blog/${blogSlug}`, { cache: "no-store" });
         return res.json()
     } catch (error) {
@@ -81,7 +80,6 @@ const SingleBlog = async ({ params }) => {
     })
 
     let getComment
-    // console.log("getComment is", getComment);
     return (
         <div className="container">
 
