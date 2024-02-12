@@ -29,6 +29,7 @@
     "react-hot-toast": "^2.4.1",
     "react-simple-typewriter": "^5.0.1",
     "sass": "^1.69.3",
+    "sharp": "^0.33.2",
     "swiper": "^8.3.2"
   },
   "devDependencies": {
