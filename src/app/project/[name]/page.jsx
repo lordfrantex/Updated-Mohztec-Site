@@ -2,7 +2,7 @@ import Image from "next/image";
 
 // METADATA FOR SEO
 export async function generateMetadata({ params }) {
-    const res = await fetch(`${process.env.BASE_URL}/api/project/${params.name}`, { cache: "no-store" });
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/project/${params.name}`, { cache: "no-store" });
     const { item } = await res.json()
     if (!item) return {
         title: "Not Found",
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
 
 const fetchSpecificProject = async (name) => {
     try {
-        const res = await fetch(`${process.env.BASE_URL}/api/project/${name}`, { cache: "no-cache" });
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/project/${name}`, { cache: "no-cache" });
         return res.json()
     } catch (error) {
         console.log(error);

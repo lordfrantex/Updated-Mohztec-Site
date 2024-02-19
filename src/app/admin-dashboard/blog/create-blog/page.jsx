@@ -89,7 +89,7 @@ const CreateBlog = () => {
         try {
 
             // const res = await fetch('http://localhost:3000/api/blog', {
-            const res = await fetch(`${process.env.BASE_URL}/api/blog`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog`, {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'

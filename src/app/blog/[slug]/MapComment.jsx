@@ -5,7 +5,7 @@ import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
 const fetchComment = async (blogSlug) => {
     // const res = await fetch(`http://localhost:3000/api/blog/blogComments/${blogSlug}`, { cache: "no-cache" })
-    const res = await fetch(`${process.env.BASE_URL}/api/blog/blogComments/${blogSlug}`, { cache: "no-cache" })
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog/blogComments/${blogSlug}`, { cache: "no-cache" })
     const data = await res.json()
     return data
 }

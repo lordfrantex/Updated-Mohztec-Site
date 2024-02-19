@@ -15,7 +15,7 @@ const Page = ({ params }) => {
     const fetchProject = async (slug) => {
         try {
             // const res = await fetch(`http://localhost:3000/api/project/${slug}`, { cache: "no-cache" });
-            const res = await fetch(`${process.env.BASE_URL}/api/project/${slug}`, { cache: "no-cache" });
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/project/${slug}`, { cache: "no-cache" });
             const { item: data } = await res.json()
             setProject(data)
         } catch (error) {
@@ -80,7 +80,7 @@ const Page = ({ params }) => {
 
             }
             // const res = await fetch(`http://localhost:3000/api/project/${slug}`, {
-            const res = await fetch(`${process.env.BASE_URL}/api/project/${slug}`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/project/${slug}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-type': 'application/json'

@@ -10,8 +10,8 @@ import TypeWriter, { SwiperComponent } from './TypeWriter';
 
 const fetchBlog = async (data) => {
     try {
-        const res = await fetch(`${process.env.BASE_URL}/api/blog?category=${data || ""}`, { cache: "no-cache" });
-        // const res = await fetch(`${process.env.process.env.BASE_URL}/api/blog?category=${data || ""}`, { cache: "no-cache" });
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog?category=${data || ""}`, { cache: "no-cache" });
+        // const res = await fetch(`${process.env.process.env.NEXT_PUBLIC_BASE_URL}/api/blog?category=${data || ""}`, { cache: "no-cache" });
         return res.json()
     } catch (error) {
         console.log(error);

@@ -8,7 +8,7 @@ import ProjectOptions from './ProjectOptions'
 // console.log("THis is the process", process.env.NEXTAUTH_URL)
 
 export const getProjects = async (category) => {
-    const url = `${process.env.BASE_URL}/api/project?category=${category || ""}`
+    const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/project?category=${category || ""}`
 
     try {
         const res = await fetch(url, { cache: "no-cache" });

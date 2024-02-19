@@ -13,7 +13,7 @@ import { Yeseva_One } from "next/font/google"
 // METADATA FOR SEO
 export async function generateMetadata({ params }) {
     // const res = await fetch(`http://localhost:3000/api/blog/${params.slug}`, { cache: "no-store" });
-    const res = await fetch(`${process.env.BASE_URL}/api/blog/${params.slug}`, { cache: "no-store" });
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog/${params.slug}`, { cache: "no-store" });
     const { item } = await res.json()
     if (!item) return {
         title: "Not Found",
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
 const fetchBlog = async (blogSlug) => {
     try {
 
-        const res = await fetch(`${process.env.BASE_URL}/api/blog/${blogSlug}`, { cache: "no-store" });
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog/${blogSlug}`, { cache: "no-store" });
         return res.json()
     } catch (error) {
         console.log(error);
@@ -40,8 +40,8 @@ const fetchBlog = async (blogSlug) => {
 
 const fetchArrayData = async (category, blogSlug) => {
     const fetchArray = [
-        fetch(`${process.env.BASE_URL}/api/blog/blogComments/${blogSlug}`, { cache: "no-cache" }),
-        fetch(`${process.env.BASE_URL}/api/blog?category=${category}&related=true&blogId=${blogSlug}`, { cache: "no-cache" }),
+        fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog/blogComments/${blogSlug}`, { cache: "no-cache" }),
+        fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog?category=${category}&related=true&blogId=${blogSlug}`, { cache: "no-cache" }),
     ]
 
     try {
