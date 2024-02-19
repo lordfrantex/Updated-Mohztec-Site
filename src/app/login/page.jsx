@@ -15,7 +15,8 @@ const Page = () => {
     const { data, status } = useSession()
     const router = useRouter()
     status === 'loading' && <div>Loading...</div>
-    status === 'authenticated' && router.push(`${process.env.BASE_URL}`)
+    // status === 'authenticated' && router.push(`${process.env.BASE_URL}`)
+    status === 'authenticated' && router.push('/')
 
     const [details, setDetails] = useState({
         email: '',

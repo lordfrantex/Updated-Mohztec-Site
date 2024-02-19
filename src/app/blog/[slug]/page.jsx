@@ -6,6 +6,7 @@ import Link from "next/link"
 import PostComment, { DeleteComment } from "./PostComment"
 import '../blog.scss'
 import MapComment from "./MapComment"
+import { Yeseva_One } from "next/font/google"
 
 
 
@@ -52,6 +53,8 @@ const fetchArrayData = async (category, blogSlug) => {
             }
         })
         const data = await Promise.all(successArray.map(item => item.json()))
+        console.log(data);
+
         return data
     } catch (error) {
         console.log(error);
@@ -61,10 +64,10 @@ const fetchArrayData = async (category, blogSlug) => {
 const SingleBlog = async ({ params }) => {
     const { slug } = params
     const { item } = await fetchBlog(slug)
-    const [blogComments, related] = await fetchArrayData(item?.category, slug)
-
-
-
+    const yes = await fetchArrayData(item?.category, slug)
+    console.log(yes);
+    const { blogComments } = yes
+    const { related } = yes
     const mapRelatedBlogs = related?.map((blog, index) => {
         return (
             <Link key={blog.id} href={`/blog/${blog.id}`} className="related-blog">
