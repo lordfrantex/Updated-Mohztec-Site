@@ -1,11 +1,10 @@
 import Image from "next/image";
-// import './admin-project.scss'
+import './admin-project.scss'
 import Link from "next/link";
 import toast from "react-hot-toast";
-// import DeleteProjectComponent from "./DeleteProjectComponent";
+import DeleteProjectComponent from "./DeleteProjectComponent";
 const fetchProject = async () => {
   try {
-    // const res = await fetch(`http://localhost:3000/api/project`, { cache: "no-cache" });
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/project`, { cache: "no-cache" });
     return res.json()
   } catch (error) {
@@ -29,7 +28,7 @@ const page = async () => {
               <p>Title: {project.title}</p>
               <p>Category: {project.category}</p>
               <button className="btn  btn-primary btn-sm me-2"><Link href={`/admin-dashboard/project/${project.id}`}>Edit</Link></button>
-              {/* <DeleteprojectComponent id={project.id} /> */}
+              <DeleteProjectComponent id={project.id} />
 
             </div>
           </div>
@@ -43,7 +42,7 @@ const page = async () => {
       <div className="row g-3 ">
         <div className="text-center">
           <p className="display-5">You are viewing this as an admin!!!</p>
-          <p className="fs-3">This Are Our project Posts</p>
+          <p className="fs-3">These Are Our project Posts</p>
           <Link href="/admin-dashboard/project/create-project" className="btn text-right ms-auto  btn-primary">Create project</Link>
         </div>
         {mapProjects}

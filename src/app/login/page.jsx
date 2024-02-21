@@ -13,6 +13,7 @@ import toast from 'react-hot-toast'
 
 const Page = () => {
     const { data, status } = useSession()
+    const [isLoading, setIsLoading] = useState(false)
     const router = useRouter()
     status === 'loading' && <div>Loading...</div>
     // status === 'authenticated' && router.push(`${process.env.NEXT_PUBLIC_BASE_URL}`)
@@ -36,6 +37,7 @@ const Page = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            setIsLoading(true)
             const res = await signIn("credentials", {
                 ...details,
                 redirect: false,
@@ -54,7 +56,7 @@ const Page = () => {
             //     password: '',
             // })
             // router.push("/")
-
+            setIsLoading(false)
         } catch (error) {
 
         }
@@ -90,15 +92,13 @@ const Page = () => {
 
                             </div>
                             <div className="submit">
-                                <button onClick={handleSubmit}>LOGIN</button>
+                                <button disabled={isLoading} onClick={handleSubmit}>{isLoading ? 'loading...' : 'LOGIN'}</button>
                             </div>
                             <div className="">
                                 <p className='text-center mt-3 text-white'>---Or Login With---</p>
                                 <p className='icon text-center'>
-                                    <span className='me-3'>
-                                        <FontAwesomeIcon icon={faFacebook} width='30px' />
-                                    </span>
-                                    <span onClick={() => signIn("google")}>
+
+                                    <span className='btn w-100 border' onClick={() => signIn("google")}>
                                         <FontAwesomeIcon icon={faGoogle} width='30px' />
                                     </span>
                                 </p>

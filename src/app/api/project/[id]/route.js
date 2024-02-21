@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import cloudinary from "../../../../../cloudinary/cloudinary";
-
+import prisma from "../../../../../prisma/connect";
 export const GET = async (req, { params }) => {
 
     try {

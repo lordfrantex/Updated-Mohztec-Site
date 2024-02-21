@@ -43,7 +43,7 @@ const page = async () => {
             <div className="row g-3 ">
                 <div className="text-center">
                     <p className="display-5">You are viewing this as an admin!!!</p>
-                    <p className="fs-3">This Are Our Blog Posts</p>
+                    <p className="fs-3">These Are Our Blog Posts</p>
                     <Link href="/admin-dashboard/blog/create-blog" className="btn text-right ms-auto  btn-primary">Create Blog</Link>
                 </div>
                 {mapBlogs}

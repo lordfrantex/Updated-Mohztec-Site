@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const DeleteBlogComponent = ({ id }) => {
+const DeleteProjectComponent = ({ id }) => {
     const router = useRouter()
     //Modal State
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,13 +17,13 @@ const DeleteBlogComponent = ({ id }) => {
         // Perform the delete operation here
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog/${id}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/project/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
                 },
             });
-            toast.success("Blog Deleted Successfully.")
+            toast.success("Project Deleted Successfully.")
         } catch (error) {
             console.log(error);
         }
@@ -51,7 +51,7 @@ const DeleteBlogComponent = ({ id }) => {
     )
 }
 
-export default DeleteBlogComponent
+export default DeleteProjectComponent
 
 
 const DeleteConfirmationModal = ({ isOpen, onClose, onDelete, id }) => {
@@ -61,7 +61,7 @@ const DeleteConfirmationModal = ({ isOpen, onClose, onDelete, id }) => {
             {isOpen && (
                 <div className="modal-overlay">
 
-                    <p>Are you sure you want to delete this blog?</p>
+                    <p>Are you sure you want to delete this Project?</p>
                     <div className="modal-buttons">
                         <div className="modals">
                             <button onClick={onClose}>Cancel</button>

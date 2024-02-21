@@ -129,7 +129,7 @@ const CreateProject = () => {
                 </div>
 
                 <textarea name="description" value={project.description} onChange={handleChange} placeholder='Enter Description...' />
-                <button type="submit" disabled={isLoading}>Submit</button>
+                <button type="submit" disabled={isLoading}>{isLoading ? "Submitting" : "Submit"}</button>
             </form>
         </div>
     )

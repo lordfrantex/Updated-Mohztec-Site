@@ -43,7 +43,9 @@ function Header() {
                         <li className="nav-item" onClick={handleClick}><Link href="/blog">Our Blogs</Link> </li>
                         {/* <li className="nav-item" onClick={handleClick}><Link href="/training">Trainings</Link> </li> */}
                         <li className="nav-item" onClick={handleClick}><Link href="/contact">Contact us</Link> </li>
-
+                        {data?.user?.role === 'admin' &&
+                            <li className="nav-item" onClick={handleClick}><Link href="/admin-dashboard">Admin Dashboard</Link> </li>
+                        }
                     </ul>
                     <div className="d-flex gap-3">
                         {status === 'unauthenticated' &&

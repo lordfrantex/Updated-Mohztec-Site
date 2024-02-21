@@ -4,9 +4,9 @@ import './create-blog.scss'
 
 import { useRef, useState } from "react"
 import toast from 'react-hot-toast'
-
+import { useRouter } from 'next/navigation'
 const CreateBlog = () => {
-
+    const router = useRouter()
 
     const [isLoading, setLoading] = useState(false)
     const [data, setData] = useState({})
@@ -67,6 +67,7 @@ const CreateBlog = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        setLoading(true)
 
         const { category, title, author, description, img } = blog
         if (!category || !title || !author || !description || !img) {
@@ -83,12 +84,8 @@ const CreateBlog = () => {
         })
         imgRef.current.value = ""
 
-
-
-        setLoading(true)
         try {
 
-            // const res = await fetch('http://localhost:3000/api/blog', {
             const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog`, {
                 method: 'POST',
                 headers: {
@@ -96,6 +93,8 @@ const CreateBlog = () => {
                 },
                 body: JSON.stringify(blog)
             })
+            router.refresh()
+
             if (res.ok) {
                 toast.success("Blog has been created successfully.")
 
@@ -135,7 +134,7 @@ const CreateBlog = () => {
                 </div>
                 <input type="text" value={blog.author} name="author" onChange={handleChange} placeholder="Enter Author's name... " />
                 <textarea name="description" value={blog.description} onChange={handleChange} placeholder='Enter Description Post...' />
-                <button type="submit" disabled={isLoading} >Submit</button>
+                <button type="submit" disabled={isLoading} > {isLoading ? "Submitting" : "Submit"}</button>
             </form >
         </div >
     )
