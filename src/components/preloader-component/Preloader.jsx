@@ -2,6 +2,7 @@
 
 import { useRef } from "react"
 import './preloader.scss'
+import Image from "next/image"
 
 const Preloader = () => {
     const preloader = useRef()
@@ -13,7 +14,7 @@ const Preloader = () => {
 
     return (
         <div ref={preloader} className="preloader">
-            <img src="/mohztec-images/logo.png" alt="" />
+            <Image height={100} width={100} src="/mohztec-images/logo.png" alt="" />
         </div>
     )
 }

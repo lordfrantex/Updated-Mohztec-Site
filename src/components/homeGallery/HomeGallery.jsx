@@ -23,8 +23,8 @@ const HomeGallery = () => {
     const mapImages = imageGallery.map((img, index) => {
         return (
             <SwiperSlide key={index}>
-                <div className="gallery-image">
-                    <img src={img} alt="image" />
+                <div className="gallery-image p-2">
+                    <Image width={500} height={300} src={img} alt="image" />
                 </div>
             </SwiperSlide>
         )
@@ -117,7 +117,7 @@ export const HeroSwiper = () => {
                     </div>
                     <div className="col-12 col-lg-6 ">
                         <div className="swiper-image ">
-                            <Image src={img} alt="" fill />
+                            <Image priority src={img} alt="" fill />
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,7 @@ export const HeroSwiper = () => {
             <Swiper modules={[Navigation, Pagination, A11y, Autoplay]}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 4000,
+                    delay: 7000,
                     disableOnInteraction: false,
                 }}
                 spaceBetween={10}

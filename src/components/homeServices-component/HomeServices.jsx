@@ -202,7 +202,7 @@ const HomeServices = () => {
                                             <div className="col-12 col-lg-6 ">
 
                                                 <div className=" d-flex gap-2 avater align-items-center ">
-                                                    <img src="/mohztec-images/man1.jpg" className='side-image' alt="" />
+                                                    <Image width={100} height={100} src="/mohztec-images/man1.jpg" className='side-image' alt="" />
                                                     <div className="mt-1">
                                                         <h4 className='p-0 m-0'>Moses Okocha</h4>
                                                         <p>CEO & Founder</p>
@@ -226,11 +226,10 @@ const HomeServices = () => {
                                 </div>
                             </div>
 
-                            <div className="col-9 m-auto col-lg-6 parent-experience">
+                            <div className="col-12 m-auto col-lg-6 parent-experience">
                                 <div className="home-about-image">
-                                    <img src="/mohztec-images/people-1.png" width='100%' alt="" />
-
-                                    <img src="/mohztec-images/man1.jpg" className='side-image' alt="" />
+                                    <Image src="/mohztec-images/people-1.png" fill alt="mohztec-technologies" />
+                                    <Image src="/mohztec-images/man1.jpg" width={1000} height={1000} className='side-image' alt="mohztec-technologies" />
                                 </div>
 
                                 <div className=" d-flex align-items-center gap-4  justify-content-between py-2 px-4 bg-dark text-white rounded-pill experience">
@@ -265,7 +264,7 @@ const HomeServices = () => {
                         </div>
                         <div className="col-md-5 about-image-vector">
                             <div data-aos="zoom-in" className="about-image m-auto ">
-                                <img src="/mohztec-images/moses.jpg" alt="" />
+                                <Image fill src="/mohztec-images/moses.jpg" alt="" />
                             </div>
                         </div>
                     </div>

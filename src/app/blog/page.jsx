@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faLinkedinIn, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import TypeWriter, { SwiperComponent } from './TypeWriter';
+import Image from 'next/image';
 
 
 const fetchBlog = async (data) => {
@@ -27,7 +28,7 @@ const Blog = async ({ searchParams }) => {
             return (
                 <div key={id} className="blog-card col-12 col-md-6 col-lg-4">
                     <div className="border rounded-5 ">
-                        <img src={imgURL} alt={title} />
+                        <Image height={300} width={400} src={imgURL} alt={title} />
                         <h4 className='mx-2'><strong>{title}</strong></h4>
                         <div className="d-flex mx-2 justify-content-between">
                             <strong className='posted-at'>{createdAt.substring(0, 10)}</strong>

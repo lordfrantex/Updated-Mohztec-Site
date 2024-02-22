@@ -13,6 +13,7 @@ import './blog.scss'
 
 // import required modules
 import { EffectCoverflow, Pagination, EffectFlip, Navigation, Autoplay } from "swiper";
+import Image from 'next/image';
 
 
 
@@ -61,7 +62,7 @@ export const SwiperComponent = () => {
             >
 
                 <SwiperSlide>
-                    <img src="/mohztec-images/moses.jpg" />
+                    <Image height={500} width={400} src="/mohztec-images/moses.jpg" />
                 </SwiperSlide>
 
             </Swiper>

@@ -53,7 +53,6 @@ const fetchArrayData = async (category, blogSlug) => {
             }
         })
         const data = await Promise.all(successArray.map(item => item.json()))
-        console.log(data);
 
         return data
     } catch (error) {
@@ -64,15 +63,13 @@ const fetchArrayData = async (category, blogSlug) => {
 const SingleBlog = async ({ params }) => {
     const { slug } = params
     const { item } = await fetchBlog(slug)
-    const yes = await fetchArrayData(item?.category, slug)
-    console.log(yes);
-    const { blogComments } = yes
-    const { related } = yes
+    const [comments, related] = await fetchArrayData(item?.category, slug)
+
     const mapRelatedBlogs = related?.map((blog, index) => {
         return (
             <Link key={blog.id} href={`/blog/${blog.id}`} className="related-blog">
                 <div className="related-blog-image">
-                    <img src={blog.imgURL} alt="" />
+                    <Image width={200} height={100} src={blog.imgURL} alt="mohztec-technologies" />
                 </div>
                 <div className="related-blog-title">
                     <p>{blog.title}</p>

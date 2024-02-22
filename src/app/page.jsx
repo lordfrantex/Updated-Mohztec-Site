@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <main>
-      {/* <HeroSwiper /> */}
+      <HeroSwiper />
       <section>
         <HomeServices />
       </section>

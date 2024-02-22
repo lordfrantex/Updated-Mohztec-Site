@@ -30,11 +30,11 @@ function Header() {
 
                 <div className="container-xxl d-flex justify-content-between align-items-center">
                     <Link onClick={handleClick} href="/" className="navbar-brand">
-                        <Image src='/mohztec-images/logo.png' alt="mohztec brand logo" height={90} width={90} />
+                        <Image priority src='/mohztec-images/logo.png' alt="mohztec brand logo" height={90} width={90} />
                     </Link>
                     <ul className={`main-nav ${toggleNav && 'expand-nav'}`}>
                         <Link onClick={handleClick} href="/" className="navbar-brand d-md-none">
-                            <Image src='/mohztec-images/logo.png' alt="mohztec brand logo" height={90} width={90} />
+                            <Image priority src='/mohztec-images/logo.png' alt="mohztec brand logo" height={90} width={90} />
                         </Link>
                         <li className="nav-item " onClick={handleClick}><Link href="/">Home</Link> </li>
                         <li className="nav-item" onClick={handleClick}><Link href="/about">About</Link> </li>
