@@ -7,7 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faLinkedinIn, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import TypeWriter, { SwiperComponent } from './TypeWriter';
 import Image from 'next/image';
-
+import { Yellowtail } from 'next/font/google'
+const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
 
 const fetchBlog = async (data) => {
     try {
@@ -57,7 +58,7 @@ const Blog = async ({ searchParams }) => {
 
                 <SwiperComponent />
                 <div className="tech-writeup">
-                    <h4>Technology</h4>
+                    <h4 className={yellowtail.className}>Technology</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe error aspernatur itaque,
                         consequatur pariatur dolorem mollitia. Ipsa minus pariatur in ad aut! Temporibus corrupti
                         nisi atque tenetur incidunt, obcaecati iste?</p>

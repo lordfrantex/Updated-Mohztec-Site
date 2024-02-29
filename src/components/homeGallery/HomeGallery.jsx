@@ -10,7 +10,9 @@ import 'swiper/css/autoplay';
 import './home-gallery.scss'
 import Link from 'next/link';
 import Image from 'next/image';
+import { Yellowtail } from 'next/font/google';
 
+const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
 const HomeGallery = () => {
     const imageGallery = [
         "/mohztec-images/man1.jpg",
@@ -33,7 +35,7 @@ const HomeGallery = () => {
         <div className="container-xxl">
             <div className="text-center">
                 <div className="col-md-5 text-center heading-texts  m-auto container">
-                    <h3 data-aos='fade-up' className='p-3 mb-3 rounded-pill  d-inline-block'>Photo Gallery</h3>
+                    <h3 data-aos='fade-up' className={`p-3 mb-3 rounded-pill  d-inline-block ${yellowtail.className}`}>Photo Gallery</h3>
                     <h4 data-aos='fade-up'>View some of our outstanding works.</h4>
                 </div>
 
@@ -73,7 +75,7 @@ const HomeGallery = () => {
                     {mapImages}
                 </div>
             </Swiper >
-        </div>
+        </div >
 
     )
 }
@@ -84,7 +86,7 @@ export default HomeGallery
 
 export const HeroSwiper = () => {
 
-    const img = '/mohztec-images/solar1.jpg'
+    const img = '/mohztec-images/solar1o.jpg'
     const slideItems = [
         {
             title: 'Solar power system installation for homes and offices.'
@@ -117,7 +119,7 @@ export const HeroSwiper = () => {
                     </div>
                     <div className="col-12 col-lg-6 ">
                         <div className="swiper-image ">
-                            <Image priority src={img} alt="" fill />
+                            <Image priority src={img} alt="" width={1000} height={400} />
                         </div>
                     </div>
                 </div>

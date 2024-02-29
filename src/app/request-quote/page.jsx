@@ -8,7 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { faMessage } from '@fortawesome/free-regular-svg-icons';
 import toast from 'react-hot-toast';
+import { Yellowtail } from 'next/font/google'
 
+const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
 
 const RequestQuote = () => {
     const [formData, setFormData] = useState({
@@ -41,7 +43,7 @@ const RequestQuote = () => {
                 <div className="col-12 col-md-7">
                     <div className="">
                         <div className="quote-page">
-                            <h1>Request a Quote</h1>
+                            <h1 className={yellowtail.className}>Request a Quote</h1>
                             <p>Your email address will not be published. Required fields are marked *
                             </p>
                             <form onSubmit={handleSubmit} className="quote-form">
@@ -83,7 +85,7 @@ const RequestQuote = () => {
                 <div className="col-12 col-md-5">
 
                     <div className="border">
-                        <Image src="/mohztec-images/solar1.jpg" alt='quote-img' height={300} width={600} />
+                        <Image src="/mohztec-images/solar1o.jpg" alt='quote-img' height={300} width={600} />
                     </div>
                     <h1>How it works?</h1>
 

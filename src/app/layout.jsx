@@ -1,5 +1,4 @@
 import './globals.scss'
-import { Inter } from 'next/font/google'
 import Navbar from '../components/navbar-component/Navbar'
 import Footer from '@/components/footer-component/Footer'
 import { ThemeContext, useTheme } from '../../context/ThemeContext'
@@ -11,6 +10,8 @@ import AuthProvider from '@/providers/AuthProvider'
 import Preloader from '@/components/preloader-component/Preloader'
 import ToastContext from '../../context/ToastContext'
 
+import { Montserrat, } from 'next/font/google'
+const montserrat = Montserrat({ subsets: ['latin'], weight: "700" })
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
@@ -22,11 +23,14 @@ export const metadata = {
   description: 'Mohztec Technologies | Experts in Solar, Electrical, and IoT installations; together with sales of solar and electrical materials. ',
 }
 
+
 export default function RootLayout({ children }) {
+
+
 
   return (
     <html lang="en">
-      <body>
+      <body className={montserrat.className}>
 
         <AuthProvider>
           <ThemeContext>
