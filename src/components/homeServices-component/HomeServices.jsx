@@ -14,13 +14,15 @@ const HomeServices = () => {
         <section className=' mt-5'>
             <div className="container-xxl">
                 <div className="col-md-5 text-center heading-texts  m-auto my-3 container">
-                    <h3 data-aos='fade-up' className={`p-3 mb-3 rounded-pill  d-inline-block ${yellowtail.className}`}>Our Services</h3>
-                    <h4 data-aos='fade-up' className=''>We Render High Quality Services</h4>
+                    <h3 className={`p-3 mb-3 rounded-pill  d-inline-block ${yellowtail.className}`}>Our Services</h3>
+                    <h4 className=''>We Render High Quality Services</h4>
+                    {/* <h3 data-aos='fade-up' className={`p-3 mb-3 rounded-pill  d-inline-block ${yellowtail.className}`}>Our Services</h3>
+                    <h4 data-aos='fade-up' className=''>We Render High Quality Services</h4> */}
                 </div>
 
                 <div className="container">
                     <div className="row g-3">
-                        <div data-aos='fade-up' className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12 ">
+                        <div className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12 ">
                             <div className="services border-end d-block d-md-flex gap-2">
                                 <div className=" thumbnail ">
                                     <div className="pt-3">
@@ -41,7 +43,7 @@ const HomeServices = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos='fade-up' className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12">
+                        <div className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12">
                             <div className="services border-end d-block d-md-flex gap-2">
                                 <div className=" thumbnail ">
                                     <div className="pt-3">
@@ -62,7 +64,7 @@ const HomeServices = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos='fade-up' className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12">
+                        <div className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12">
                             <div className="services d-md-flex d-block gap-2">
                                 <div className=" thumbnail ">
                                     <div className="pt-3">
@@ -83,7 +85,7 @@ const HomeServices = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos='fade-up' className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12">
+                        <div className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12">
                             <div className="services border-end d-block  d-md-flex gap-2">
                                 <div className=" thumbnail ">
                                     <div className="pt-3">
@@ -104,7 +106,7 @@ const HomeServices = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos='fade-up' className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12">
+                        <div className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12">
                             <div className="services border-end d-block d-md-flex gap-2">
                                 <div className=" thumbnail ">
                                     <div className="pt-3">
@@ -125,7 +127,7 @@ const HomeServices = () => {
                                 </div>
                             </div>
                         </div>
-                        <div data-aos='fade-up' className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12">
+                        <div className="col-md-6 col-xl-4 col-lg-6 col-sm-12 col-12">
                             <div className="services d-block d-md-flex gap-2">
                                 <div className=" thumbnail ">
                                     <div className="pt-3">
@@ -158,13 +160,13 @@ const HomeServices = () => {
             <section className="my-5 ">
                 <div className="about-container container-xxl">
                     <div className="col-md-5 text-center heading-texts my-3 m-auto">
-                        <h3 data-aos='fade-up' className={`p-3  rounded-pill  d-inline-block ${yellowtail.className}`}>About Us</h3>
+                        <h3 className={`p-3  rounded-pill  d-inline-block ${yellowtail.className}`}>About Us</h3>
                     </div>
                     <div className="container-xl">
                         <div className="row g-5">
                             <div className="col-lg-6">
                                 <div className="p-4">
-                                    <h2 data-aos='fade-up' className='h1'>We provide top notch technological innovations in town.</h2>
+                                    <h2 className='h1'>We provide top notch technological innovations in town.</h2>
                                     <p data-aos='fade-up'>Welcome to Mohztec Technologies, where innovation meets reliability. As a leading provider of solar,
                                         CCTV, and electrical solutions, we are dedicated to transforming the way you power and secure your world.
                                         Our commitment to excellence and sustainability
