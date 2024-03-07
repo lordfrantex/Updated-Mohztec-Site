@@ -1,4 +1,6 @@
 'use client'
+import { Yellowtail } from 'next/font/google'
+const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400", })
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
@@ -10,9 +12,8 @@ import 'swiper/css/autoplay';
 import './home-gallery.scss'
 import Link from 'next/link';
 import Image from 'next/image';
-import { Yellowtail } from 'next/font/google';
 
-const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
+
 const HomeGallery = () => {
     const imageGallery = [
         "/mohztec-images/man1.jpg",
@@ -33,13 +34,14 @@ const HomeGallery = () => {
     })
     return (
         <div className="container-xxl">
-            <div className="text-center">
+            <div className="text-center ">
                 <div className="col-md-5 text-center heading-texts  m-auto container">
                     <h3 data-aos='fade-up' className={`p-3 mb-3 rounded-pill  d-inline-block ${yellowtail.className}`}>Photo Gallery</h3>
                     <h4 data-aos='fade-up'>View some of our outstanding works.</h4>
                 </div>
 
             </div>
+
             <Swiper modules={[Navigation, Pagination, A11y, Autoplay]}
                 // centeredSlides={true}
                 autoplay={{
@@ -72,6 +74,7 @@ const HomeGallery = () => {
             >
 
                 <div className="swiper-background">
+
                     {mapImages}
                 </div>
             </Swiper >

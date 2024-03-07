@@ -8,7 +8,7 @@ import { faFacebook, faLinkedinIn, faTiktok, faTwitter } from '@fortawesome/free
 import TypeWriter, { SwiperComponent } from './TypeWriter';
 import Image from 'next/image';
 import { Yellowtail } from 'next/font/google'
-const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
+const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400", display: "swap" })
 
 const fetchBlog = async (data) => {
     try {

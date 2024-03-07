@@ -5,6 +5,8 @@ import { faChartBar } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 import Testimonial from '../testimonial-components/testimonial'
+import { Yellowtail } from 'next/font/google'
+const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400", display: "swap" })
 
 const HomeServices = () => {
 
@@ -12,8 +14,8 @@ const HomeServices = () => {
         <section className=' mt-5'>
             <div className="container-xxl">
                 <div className="col-md-5 text-center heading-texts  m-auto my-3 container">
-                    <h3 data-aos='fade-up' className='p-3 mb-3 rounded-pill  d-inline-block'>Our Services</h3>
-                    <h4 data-aos='fade-up'>We Render High Quality Services</h4>
+                    <h3 data-aos='fade-up' className={`p-3 mb-3 rounded-pill  d-inline-block ${yellowtail.className}`}>Our Services</h3>
+                    <h4 data-aos='fade-up' className=''>We Render High Quality Services</h4>
                 </div>
 
                 <div className="container">
@@ -156,7 +158,7 @@ const HomeServices = () => {
             <section className="my-5 ">
                 <div className="about-container container-xxl">
                     <div className="col-md-5 text-center heading-texts my-3 m-auto">
-                        <h3 data-aos='fade-up' className='p-3  rounded-pill  d-inline-block'>About Us</h3>
+                        <h3 data-aos='fade-up' className={`p-3  rounded-pill  d-inline-block ${yellowtail.className}`}>About Us</h3>
                     </div>
                     <div className="container-xl">
                         <div className="row g-5">
@@ -252,7 +254,7 @@ const HomeServices = () => {
                     <div className="row g-3 justify-content-center align-items-center">
                         <div className="col-md-5">
                             <div className="about-text-block p-4 ">
-                                <h2 className='fw-bold' data-aos="fade-up">Meet our C.E.O</h2>
+                                <h2 className='fw-bold' data-aos="fade-up">Meet the C.E.O</h2>
                                 <p data-aos="fade-up">
                                     Under the leadership of Moses Okocha, Mohztec Technologies has thrived as a beacon of innovation and sustainability. With a strategic vision that extends beyond industry norms,
                                     He has propelled the company towards new heights, fostering a culture of creativity, collaboration, and continuous improvement. Moses is not just a CEO, He is a visionary with a
@@ -274,7 +276,7 @@ const HomeServices = () => {
             </section>
 
 
-        </section>
+        </section >
 
     )
 }

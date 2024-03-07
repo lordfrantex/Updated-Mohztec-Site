@@ -10,7 +10,7 @@ import { faMessage } from '@fortawesome/free-regular-svg-icons';
 import toast from 'react-hot-toast';
 import { Yellowtail } from 'next/font/google'
 
-const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
+const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400", display: "swap" })
 
 const RequestQuote = () => {
     const [formData, setFormData] = useState({

@@ -3,7 +3,8 @@ import './title.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Yellowtail } from 'next/font/google'
-const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
+// import { Yellowtail } from 'next/font/google'
+const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400", display: "swap" })
 const Title = (props) => {
     return (
         <div className="title-header container-xxl">

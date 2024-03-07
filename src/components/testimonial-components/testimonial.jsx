@@ -17,13 +17,15 @@ import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import Image from "next/image";
+import { Yellowtail } from 'next/font/google'
+const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400", display: "swap" })
 
 
 const Testimonial = () => {
     return (
         <section className='testimonial'>
             <div className="heading-texts text-center">
-                <h3>Customers Testimonials</h3>
+                <h3 className={yellowtail.className}>Customers Testimonials</h3>
             </div>
             <Swiper
                 effect={"coverflow"}
