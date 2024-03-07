@@ -187,6 +187,7 @@ const Training = () => {
         //     </div>
 
         // </div>
+        <div className="">hello world</div>
     )
 }
 
