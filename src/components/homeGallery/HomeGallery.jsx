@@ -1,6 +1,4 @@
 'use client'
-import { Yellowtail } from 'next/font/google'
-const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400", })
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
@@ -12,8 +10,9 @@ import 'swiper/css/autoplay';
 import './home-gallery.scss'
 import Link from 'next/link';
 import Image from 'next/image';
+import { Yellowtail } from 'next/font/google';
 
-
+const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
 const HomeGallery = () => {
     const imageGallery = [
         "/mohztec-images/man1.jpg",
@@ -34,14 +33,13 @@ const HomeGallery = () => {
     })
     return (
         <div className="container-xxl">
-            <div className="text-center ">
+            <div className="text-center">
                 <div className="col-md-5 text-center heading-texts  m-auto container">
                     <h3 data-aos='fade-up' className={`p-3 mb-3 rounded-pill  d-inline-block ${yellowtail.className}`}>Photo Gallery</h3>
                     <h4 data-aos='fade-up'>View some of our outstanding works.</h4>
                 </div>
 
             </div>
-
             <Swiper modules={[Navigation, Pagination, A11y, Autoplay]}
                 // centeredSlides={true}
                 autoplay={{
@@ -74,7 +72,6 @@ const HomeGallery = () => {
             >
 
                 <div className="swiper-background">
-
                     {mapImages}
                 </div>
             </Swiper >
@@ -114,7 +111,7 @@ export const HeroSwiper = () => {
                 <div className="swiper-content row g-4">
                     <div className="col-12 col-md-8 m-auto col-lg-5 ">
                         <div className="swiper-desc text-center text-lg-start">
-                            <h1 data-aos='fade-up'>{item.title}</h1>
+                            <h1>{item.title}</h1>
                             <div className=" mt-5 enquiry">
                                 <button className=''> <Link href="/request-quote">Get Quote</Link></button>
                             </div>
@@ -122,7 +119,7 @@ export const HeroSwiper = () => {
                     </div>
                     <div className="col-12 col-lg-6 ">
                         <div className="swiper-image ">
-                            <Image priority src={img} alt="" width={1000} height={400} />
+                            <Image priority src={img} alt="" fill />
                         </div>
                     </div>
                 </div>
@@ -135,10 +132,10 @@ export const HeroSwiper = () => {
         <div>
             <Swiper modules={[Navigation, Pagination, A11y, Autoplay]}
                 centeredSlides={true}
-                autoplay={{
-                    delay: 7000,
-                    disableOnInteraction: false,
-                }}
+                // autoplay={{
+                //     delay: 7000,
+                //     disableOnInteraction: false,
+                // }}
                 spaceBetween={10}
                 slidesPerView={1}
                 navigation
@@ -154,3 +151,76 @@ export const HeroSwiper = () => {
         </div>
     )
 }
+
+
+
+
+
+
+// export const HeroSwiper = () => {
+
+//     const img = '/mohztec-images/solar1o.jpg'
+//     const slideItems = [
+//         {
+//             title: 'Solar power system installation for homes and offices.'
+//         },
+//         {
+//             title: 'We provide the best and permanent electrical power solution '
+//         },
+//         {
+//             title: 'We provide unique services. Go Solar today with Mohztec Technologies'
+//         },
+//         {
+//             title: 'Secure your environment with Mohztec Technologies (CCTV Installation)'
+//         },
+//         {
+//             title: 'Integrate smart home automation with Mohztec\'s IoT '
+//         },
+//     ]
+
+//     const swiperSlide = slideItems.map((item, index) => {
+//         return (
+//             <SwiperSlide key={index}>
+//                 <div className="swiper-content row g-4">
+//                     <div className="col-12 col-md-8 m-auto col-lg-5 ">
+//                         <div className="swiper-desc text-center text-lg-start">
+//                             <h1 data-aos='fade-up'>{item.title}</h1>
+//                             <div className=" mt-5 enquiry">
+//                                 <button className=''> <Link href="/request-quote">Get Quote</Link></button>
+//                             </div>
+//                         </div>
+//                     </div>
+//                     <div className="col-12 col-lg-6 ">
+//                         <div className="swiper-image ">
+//                             <Image priority src={img} alt="" width={1000} height={400} />
+//                         </div>
+//                     </div>
+//                 </div>
+//             </SwiperSlide>
+//         )
+//     })
+
+
+//     return (
+//         <div>
+//             <Swiper modules={[Navigation, Pagination, A11y, Autoplay]}
+//                 centeredSlides={true}
+//                 autoplay={{
+//                     delay: 7000,
+//                     disableOnInteraction: false,
+//                 }}
+//                 spaceBetween={10}
+//                 slidesPerView={1}
+//                 navigation
+//                 pagination={{ clickable: true }}
+//                 grabCursor={true}
+//                 loop={true}
+//                 className={`display-container container-xxl`}
+//             >
+//                 <div className="swiper-background">
+//                     {swiperSlide}
+//                 </div>
+//             </Swiper >
+//         </div>
+//     )
+// }
