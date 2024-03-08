@@ -132,10 +132,10 @@ export const HeroSwiper = () => {
         <div>
             <Swiper modules={[Navigation, Pagination, A11y, Autoplay]}
                 centeredSlides={true}
-                // autoplay={{
-                //     delay: 7000,
-                //     disableOnInteraction: false,
-                // }}
+                autoplay={{
+                    delay: 10000,
+                    disableOnInteraction: false,
+                }}
                 spaceBetween={10}
                 slidesPerView={1}
                 navigation
