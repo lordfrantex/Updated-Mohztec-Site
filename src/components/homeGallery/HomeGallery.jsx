@@ -15,12 +15,12 @@ import { Yellowtail } from 'next/font/google';
 const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
 const HomeGallery = () => {
     const imageGallery = [
-        "/mohztec-images/Solar/IMG_9504.jpg",
-        "/mohztec-images/INVERTER-SETUP/IMG_8343.jpg",
-        "/mohztec-images/cctv/IMG_8886.jpg",
-        "/mohztec-images/lighting/IMG_7305.jpg",
-        "/mohztec-images/solar/2023_01_04_18_36_IMG_1951.jpg",
-        "/mohztec-images/INVERTER-SETUP/IMG_3830.jpg",
+        "/mohztec-images/Solar/IMG_9504.Jpg",
+        "/mohztec-images/INVERTER-SETUP/IMG_8343.Jpg",
+        "/mohztec-images/cctv/IMG_8886.Jpg",
+        "/mohztec-images/lighting/IMG_7305.Jpg",
+        "/mohztec-images/solar/2023_01_04_18_36_IMG_1951.Jpg",
+        "/mohztec-images/INVERTER-SETUP/IMG_3830.Jpg",
 
     ]
     const mapImages = imageGallery.map((img, index) => {
@@ -90,27 +90,27 @@ export const HeroSwiper = () => {
     const slideItems = [
         {
             title: 'Solar power system installation for homes and offices.',
-            img: "/mohztec-images/Solar/2023_04_20_20_05_IMG_9768.jpg"
+            img: "/mohztec-images/Solar/2023_04_20_20_05_IMG_9768.Jpg"
         },
         {
             title: 'We provide the best and permanent electrical power solution ',
-            img: "/mohztec-images/Electrical/IMG_1990.jpg"
+            img: "/mohztec-images/Electrical/IMG_1990.Jpg"
 
         },
 
         {
             title: 'Secure your environment with Mohztec Technologies (CCTV Installation)',
-            img: "/mohztec-images/CCTV/2022_06_28_14_41_IMG_1809.jpg"
+            img: "/mohztec-images/CCTV/2022_06_28_14_41_IMG_1809.Jpg"
 
         },
         {
             title: 'Integrate smart home automation with Mohztec\'s IoT ',
-            img: "/mohztec-images/IOT/2024_03_19_15_10_IMG_0441.jpg"
+            img: "/mohztec-images/IOT/2024_03_19_15_10_IMG_0441.Jpg"
 
         },
         {
             title: 'Interior decoration and aesthetics with Mohztec\'s lightenings ',
-            img: "/mohztec-images/lighting/IMG_1991.jpg"
+            img: "/mohztec-images/lighting/IMG_1991.Jpg"
 
         },
         {
