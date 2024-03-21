@@ -15,12 +15,12 @@ import { Yellowtail } from 'next/font/google';
 const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
 const HomeGallery = () => {
     const imageGallery = [
-        "/mohztec-images/Solar/IMG_9504.Jpg",
-        "/mohztec-images/INVERTER-SETUP/IMG_8343.Jpg",
-        "/mohztec-images/cctv/IMG_8886.Jpg",
-        "/mohztec-images/lighting/IMG_7305.Jpg",
-        "/mohztec-images/solar/2023_01_04_18_36_IMG_1951.Jpg",
-        "/mohztec-images/INVERTER-SETUP/IMG_3830.Jpg",
+        "/mohztec-images/Solar/IMG_9504.JPG",
+        "/mohztec-images/INVERTER-SETUP/IMG_8343.JPG",
+        "/mohztec-images/cctv/IMG_8886.JPG",
+        "/mohztec-images/lighting/IMG_7305.JPG",
+        "/mohztec-images/solar/2023_01_04_18_36_IMG_1951.JPG",
+        "/mohztec-images/INVERTER-SETUP/IMG_3830.JPG",
 
     ]
     const mapImages = imageGallery.map((img, index) => {
@@ -94,23 +94,23 @@ export const HeroSwiper = () => {
         },
         {
             title: 'We provide the best and permanent electrical power solution ',
-            img: "/mohztec-images/Electrical/IMG_1990.Jpg"
+            img: "/mohztec-images/Electrical/IMG_1990.JPG"
 
         },
 
         {
             title: 'Secure your environment with Mohztec Technologies (CCTV Installation)',
-            img: "/mohztec-images/CCTV/2022_06_28_14_41_IMG_1809.Jpg"
+            img: "/mohztec-images/CCTV/2022_06_28_14_41_IMG_1809.JPG"
 
         },
         {
             title: 'Integrate smart home automation with Mohztec\'s IoT ',
-            img: "/mohztec-images/IOT/2024_03_19_15_10_IMG_0441.Jpg"
+            img: "/mohztec-images/IOT/2024_03_19_15_10_IMG_0441.JPG"
 
         },
         {
             title: 'Interior decoration and aesthetics with Mohztec\'s lightenings ',
-            img: "/mohztec-images/lighting/IMG_1991.Jpg"
+            img: "/mohztec-images/lighting/IMG_1991.JPG"
 
         },
         {
