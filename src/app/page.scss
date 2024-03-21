@@ -2,7 +2,7 @@
 @use '../../scss/helpers/_variables.scss' as * ;
 
 .display-container{
-    background-image:  linear-gradient(rgba(0, 0, 255, 0.212),rgba(17, 16, 16, 0.514)), url(/mohztec-images/solar2.jpg);
+    background-image:  linear-gradient(rgba(21, 21, 24, 0.692),rgba(17, 16, 16, 0.808)), url(/mohztec-images/solar2.jpg);
     margin-top: 90px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,9 +10,11 @@
     @include flex-center-center();
 }
 
+.swiper-button-next, .swiper-button-prev{
+    color: white !important;
+}
 .swiper-content {
-    padding: 30px 50px;
-    margin-top: 50px;
+    padding: 50px;
     @media (max-width:400px){
         &{
             padding: 20px;
@@ -20,9 +22,13 @@
         }
     }
     .swiper-image{
-        height: 349px;
+        height: 410pxIMG_8342
         position: relative;
-
+        @media (max-width:400px){
+            &{
+               height: 250px;
+            }
+        }
     }
 }
   

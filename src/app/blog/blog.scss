@@ -2,24 +2,25 @@
 @use '../../../scss/helpers/_mixins.scss' as *;
 
 .blog-header {
+    text-align: center;
     padding: 120px 10px;
     background-image: radial-gradient(rgba(30, 43, 46, 0.815), rgba(17, 17, 20, 0.952)), url("/mohztec-images/magnifier-g86b337b98_1920.jpg");
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+
 }
 
 .blog-header h3 {
-    color: white;
-    padding: 10px;
-    font-size: 60px;
+    height: 90px;
+    font-size: 38px;
 }
 
 .blog-header p {
-    color: white;
-    padding: 10px;
-    font-size: 30px;
+
+    font-size: 20px;
 }
 
 .blog-search {
@@ -75,7 +76,7 @@
 
 .blog-card p {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -350,7 +351,9 @@
 
 
 .single-blog-main-image{
-    height: 500px;
+    // height: 500px;
+    aspect-ratio: 3/2;
+    // object-fit: contain;
     position: relative;
 }
 

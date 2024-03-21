@@ -3,7 +3,7 @@ import './footer.scss'
 import { faAddressBook, faClock, faMobileScreen, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 import { faFacebook, faInstagram, faLinkedinIn, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
-
+import Link from 'next/link'
 const Footer = () => {
     return (
         <>
@@ -30,16 +30,24 @@ const Footer = () => {
 
                                     <div className="social-icons my-5 justify-content-lg-start justify-content-center">
                                         <span data-aos='zoom-in'>
-                                            <FontAwesomeIcon icon={faFacebook} height={40} width={40} />
+                                            <Link href='https://www.facebook.com/p/Mohztec-Technologies-100057766414382/'>
+                                                <FontAwesomeIcon icon={faFacebook} height={40} width={40} />
+                                            </Link>
                                         </span>
                                         <span data-aos='zoom-in'>
-                                            <FontAwesomeIcon icon={faTiktok} height={40} width={40} />
+                                            <Link href='https://www.tiktok.com/@mohztec'>
+                                                <FontAwesomeIcon icon={faTiktok} height={40} width={40} />
+                                            </Link>
                                         </span>
                                         <span data-aos='zoom-in'>
-                                            <FontAwesomeIcon icon={faInstagram} height={40} width={40} />
+                                            <Link href='https://www.instagram.com/mohztectechnologies/'>
+                                                <FontAwesomeIcon icon={faInstagram} height={40} width={40} />
+                                            </Link>
                                         </span>
                                         <span data-aos='zoom-in'>
-                                            <FontAwesomeIcon icon={faYoutube} height={40} width={40} />
+                                            <Link href='https://www.youtube.com/channel/UCy1RGhnaprl3vPVMSqWbpdA'>
+                                                <FontAwesomeIcon icon={faYoutube} height={40} width={40} />
+                                            </Link>
                                         </span>
 
                                     </div>
@@ -68,8 +76,8 @@ const Footer = () => {
 
                                         <div className="phonenumber">
                                             <h3 className='fw-bold'>Contacts</h3>
-                                            <p>+248102300105</p>
-                                            <p>+248102300105</p>
+                                            <p>+234 8132790521</p>
+                                            <p>+234 8051040368</p>
                                         </div>
                                     </div>
                                 </div>

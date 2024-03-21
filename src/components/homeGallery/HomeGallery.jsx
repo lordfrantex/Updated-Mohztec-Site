@@ -15,18 +15,19 @@ import { Yellowtail } from 'next/font/google';
 const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
 const HomeGallery = () => {
     const imageGallery = [
-        "/mohztec-images/man1.jpg",
-        "/mohztec-images/man2.jpg",
-        "/mohztec-images/man1.jpg",
-        "/mohztec-images/man2.jpg",
-        "/mohztec-images/man1.jpg",
+        "/mohztec-images/Solar/IMG_9504.jpg",
+        "/mohztec-images/INVERTER-SETUP/IMG_8343.jpg",
+        "/mohztec-images/cctv/IMG_8886.jpg",
+        "/mohztec-images/lighting/IMG_7305.jpg",
+        "/mohztec-images/solar/2023_01_04_18_36_IMG_1951.jpg",
+        "/mohztec-images/INVERTER-SETUP/IMG_3830.jpg",
 
     ]
     const mapImages = imageGallery.map((img, index) => {
         return (
             <SwiperSlide key={index}>
                 <div className="gallery-image p-2">
-                    <Image width={500} height={300} src={img} alt="image" />
+                    <Image width={600} height={350} src={img} alt="image" />
                 </div>
             </SwiperSlide>
         )
@@ -86,22 +87,36 @@ export default HomeGallery
 
 export const HeroSwiper = () => {
 
-    const img = '/mohztec-images/solar1o.jpg'
     const slideItems = [
         {
-            title: 'Solar power system installation for homes and offices.'
+            title: 'Solar power system installation for homes and offices.',
+            img: "/mohztec-images/Solar/2023_04_20_20_05_IMG_9768.jpg"
         },
         {
-            title: 'We provide the best and permanent electrical power solution '
+            title: 'We provide the best and permanent electrical power solution ',
+            img: "/mohztec-images/Electrical/IMG_1990.jpg"
+
+        },
+
+        {
+            title: 'Secure your environment with Mohztec Technologies (CCTV Installation)',
+            img: "/mohztec-images/CCTV/2022_06_28_14_41_IMG_1809.jpg"
+
         },
         {
-            title: 'We provide unique services. Go Solar today with Mohztec Technologies'
+            title: 'Integrate smart home automation with Mohztec\'s IoT ',
+            img: "/mohztec-images/IOT/2024_03_19_15_10_IMG_0441.jpg"
+
         },
         {
-            title: 'Secure your environment with Mohztec Technologies (CCTV Installation)'
+            title: 'Interior decoration and aesthetics with Mohztec\'s lightenings ',
+            img: "/mohztec-images/lighting/IMG_1991.jpg"
+
         },
         {
-            title: 'Integrate smart home automation with Mohztec\'s IoT '
+            title: 'We provide unique Solar-Inverter services. Go Solar today with Mohztec Technologies',
+            img: "/mohztec-images/Solar/IMG-20240319-WA0008.jpg"
+
         },
     ]
 
@@ -119,7 +134,7 @@ export const HeroSwiper = () => {
                     </div>
                     <div className="col-12 col-lg-6 ">
                         <div className="swiper-image ">
-                            <Image priority src={img} alt="" fill />
+                            <Image priority src={item.img} alt="" fill />
                         </div>
                     </div>
                 </div>

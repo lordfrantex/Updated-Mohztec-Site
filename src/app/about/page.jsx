@@ -70,44 +70,46 @@ const About = () => {
                     <h2 className='text-center fw-bold'>Professional Team Members</h2>
                     <div className="row justify-content-center  g-5">
                         <div className="col-12 col-md-4 col-lg-3">
+
                             <div className="team-card p-3">
                                 <div className="team-card-image">
-                                    <Image fill src="/mohztec-images/moses.jpg" alt="" />
+                                    <Image fill src="/mohztec-images/team/moses2.jpg" alt="" />
                                 </div>
                                 <p>Name: Moses Okocha</p>
                                 <p className="title">Team Leader / C.E.O</p>
+                            </div>
+                        </div>
+
+                        <div className="col-12 col-md-4 col-lg-3">
+                            <div className="team-card p-3">
+                                <div className="team-card-image">
+                                    <Image fill src="/mohztec-images/team/frank.jpeg" alt="" />
+                                </div>
+                                <p>Name: Kanebi Franklyn</p>
+                                <p className="title">Chief Technology Officer</p>
                             </div>
                         </div>
                         <div className="col-12 col-md-4 col-lg-3">
 
                             <div className="team-card p-3">
                                 <div className="team-card-image">
-                                    <Image fill src="/mohztec-images/man1.jpg" alt="" />
+                                    <Image fill src="/mohztec-images/team/ope.jpg" alt="" />
                                 </div>
                                 <p>Name: Moses Okocha</p>
-                                <p className="title">Team Leader / C.E.O</p>
+                                <p className="title">Field Cordinator</p>
                             </div>
                         </div>
                         <div className="col-12 col-md-4 col-lg-3">
 
                             <div className="team-card p-3">
                                 <div className="team-card-image">
-                                    <Image fill src="/mohztec-images/man2.jpg" alt="" />
+                                    <Image fill src="/mohztec-images/team/emeka.jpg" alt="" />
                                 </div>
-                                <p>Name: Moses Okocha</p>
-                                <p className="title">Team Leader / C.E.O</p>
+                                <p>Name:Okocha Emeka</p>
+                                <p className="title">Human Resource Manager</p>
                             </div>
                         </div>
-                        <div className="col-12 col-md-4 col-lg-3">
 
-                            <div className="team-card p-3">
-                                <div className="team-card-image">
-                                    <Image fill src="/mohztec-images/man2.jpg" alt="" />
-                                </div>
-                                <p>Name: Moses Okocha</p>
-                                <p className="title">Team Leader / C.E.O</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

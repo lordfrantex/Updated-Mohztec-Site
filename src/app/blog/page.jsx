@@ -29,11 +29,11 @@ const Blog = async ({ searchParams }) => {
             return (
                 <div key={id} className="blog-card col-12 col-md-6 col-lg-4">
                     <div className="border rounded-5 ">
-                        <Image height={300} width={400} src={imgURL} alt={title} />
-                        <h4 className='mx-2'><strong>{title}</strong></h4>
-                        <div className="d-flex mx-2 justify-content-between">
-                            <strong className='posted-at'>{createdAt.substring(0, 10)}</strong>
-                            <strong className='author ms-auto'>By {author}</strong>
+                        <Image height={250} width={400} src={imgURL} alt={title} />
+                        <h4 className='mx-2 fw-bold fs-5'>Title: {title}</h4>
+                        <div className="d-flex mx-2 align-items-center justify-content-between">
+                            <span className='posted-at m-0 fst-italic'>{createdAt.substring(0, 10)}</span>
+                            <span className='m-0 fs-6 author ms-auto fst-italic'>By {author}</span>
                         </div>
                         <p className='mx-2'>{description}</p>
                         <Link href={`/blog/${id}`}> <button>Read More</button></Link>

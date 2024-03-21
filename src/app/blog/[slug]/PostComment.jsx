@@ -3,7 +3,7 @@
 import { text } from "@fortawesome/fontawesome-svg-core"
 import { faThumbsUp, faTrash } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useSession } from "next-auth/react"
+import { signIn, useSession } from "next-auth/react"
 import Image from "next/image"
 import { redirect, useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
@@ -75,7 +75,8 @@ const PostComment = ({ slug }) => {
         <>
 
             <textarea name="" onChange={(e) => setComment(e.target.value)} value={comment} placeholder="Add a comment"></textarea>
-            <button className="post-button" disabled={loading} onClick={() => email ? postBlogComment(slug, email, comment) : router.push("/login")}>Post</button >
+            {/* <button className="post-button" disabled={loading} onClick={() => email ? postBlogComment(slug, email, comment) : router.push("/login")}>Post</button > */}
+            <button className="post-button" disabled={loading} onClick={() => email ? postBlogComment(slug, email, comment) : signIn('google', { callbackUrl: `/blog/${slug}` })}>Post</button >
 
             {/* <small onClick={() => redirect("/login?callbackUrl=/blog")}>Redirect</small>s */}
             {

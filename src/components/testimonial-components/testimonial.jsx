@@ -22,6 +22,93 @@ const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400", display: "swa
 
 
 const Testimonial = () => {
+
+    const testimony = [
+        {
+            img: '/mohztec-images/testimony/ope.jpg',
+            name: "Mr Ope",
+            position: "C.E.O of Gadjet Care Technology",
+            testimony: "Mohztec technologies is the best in solar technologies. He installed a 2.5kva solar setup and it's still woking perfectly. Thank you sir, I sincerly appreciate your work.",
+
+        },
+        {
+            img: '/mohztec-images/testimony/femi.jpg',
+            name: "Mr Femi",
+            position: "Senior Software developer",
+            testimony: " Moses knows his craft very well. I had issues with my house wiring and within minutes, he has figured out the problem and restored my power, and up till now, i'm enjoying it.",
+
+        },
+        {
+            img: '/mohztec-images/testimony/Prof S.A Adedunkan.jpg',
+            name: "Prof S.A Adedunkan",
+            position: "Professor/Director FUTA ",
+            testimony: " Very responsive and kind as well. Treats customers with maximum respect. He did IoT home automation with Alexa and he delivered the job excellently",
+
+        },
+        {
+            img: '/mohztec-images/testimony/boli.jpg',
+            name: "Shally tech",
+            position: "C.E.O Boli Reloaded ",
+            testimony: " Wow... I am super proud of mohztec. He designed my workspace with beautiful interior lights and it's just so amazing.",
+
+        },
+        {
+            img: '/mohztec-images/testimony/sola.jpg',
+            name: "Mr Shola",
+            position: "C.E.O Mixi Arts",
+            testimony: " Thank you moses for all you do. Your kind gesture is very rare. You helped with my CCTV installation and also in giving professional consultancy advice.",
+
+        },
+        {
+            img: '/mohztec-images/testimony/jomiloju.jpg',
+            name: " Jomiloju",
+            position: "Senior Backend Engineer",
+            testimony: "Moses installed a 3.5kva inverter system and i have been enjoying unlimited power. Thanks for the good and professional work.",
+
+        },
+        {
+            img: '/mohztec-images/testimony/samtop.jpg',
+            name: "Samtop",
+            position: "C.E.O Samtop",
+            testimony: "Mohztec is amazing. All my home appliances are effectively running on solar. Uninterrupted power supply.",
+
+        },
+
+    ]
+    const mapTestimonies = testimony.map((testimony, index) => {
+        return (
+            <SwiperSlide>
+                <div className="testifiers">
+                    <span className="right-quote">
+                        <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
+                    </span>
+                    <span className="left-quote">
+                        <FontAwesomeIcon icon={faQuoteLeft}></FontAwesomeIcon>
+                    </span>
+
+                    <div className="image">
+                        <Image src={testimony.img} alt="" fill />
+
+                    </div>
+                    <div className="texts">
+                        <div className="stars">
+                            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
+                        </div>
+                        <p>{testimony.testimony}</p>
+                        <div className="name">
+                            <span>{testimony.name}</span>
+                            <span>{testimony.position}</span>
+                        </div>
+                    </div>
+                </div>
+            </SwiperSlide>
+        )
+    })
+
     return (
         <section className='testimonial'>
             <div className="heading-texts text-center">
@@ -51,191 +138,7 @@ const Testimonial = () => {
                 modules={[EffectCoverflow, Autoplay, Pagination]}
                 className="container"
             >
-                <SwiperSlide>
-                    <div className="testifiers">
-                        <span className="right-quote">
-                            <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
-                        </span>
-                        <span className="left-quote">
-                            <FontAwesomeIcon icon={faQuoteLeft}></FontAwesomeIcon>
-                        </span>
-
-                        <div className="image">
-                            <Image src="/mohztec-images/man1.jpg" alt="" fill />
-
-                        </div>
-                        <div className="texts">
-                            <div className="stars">
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quidem excepturi illo distinctio quaerat ipsum similique, natus voluptates,
-                                repudiandae labore incidunt repellendus perferendis?</p>
-                            <div className="name">
-                                <span>Roland Rich</span>
-                                <span>C.E.O Mohztec Technologies</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="testifiers">
-                        <span className="right-quote">
-                            <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
-                        </span>
-                        <span className="left-quote">
-                            <FontAwesomeIcon icon={faQuoteLeft}></FontAwesomeIcon>
-                        </span>
-
-                        <div className="image">
-                            <Image src="/mohztec-images/man1.jpg" alt="" fill />
-
-
-                        </div>
-                        <div className="texts">
-                            <div className="stars">
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quidem excepturi illo distinctio quaerat ipsum similique, natus voluptates,
-                                repudiandae labore incidunt repellendus perferendis?</p>
-                            <div className="name">
-                                <span>Roland Rich</span>
-                                <span>C.E.O Mohztec Technologies</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="testifiers">
-                        <span className="right-quote">
-                            <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
-                        </span>
-                        <span className="left-quote">
-                            <FontAwesomeIcon icon={faQuoteLeft}></FontAwesomeIcon>
-                        </span>
-
-                        <div className="image">
-                            <Image src="/mohztec-images/man1.jpg" alt="" fill />
-
-
-                        </div>
-                        <div className="texts">
-                            <div className="stars">
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quidem excepturi illo distinctio quaerat ipsum similique, natus voluptates,
-                                repudiandae labore incidunt repellendus perferendis?</p>
-                            <div className="name">
-                                <span>Roland Rich</span>
-                                <span>C.E.O Mohztec Technologies</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="testifiers">
-                        <span className="right-quote">
-                            <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
-                        </span>
-                        <span className="left-quote">
-                            <FontAwesomeIcon icon={faQuoteLeft}></FontAwesomeIcon>
-                        </span>
-
-                        <div className="image">
-                            <Image src="/mohztec-images/man1.jpg" alt="" fill />
-
-
-                        </div>
-                        <div className="texts">
-                            <div className="stars">
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quidem excepturi illo distinctio quaerat ipsum similique, natus voluptates,
-                                repudiandae labore incidunt repellendus perferendis?</p>
-                            <div className="name">
-                                <span>Roland Rich</span>
-                                <span>C.E.O Mohztec Technologies</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="testifiers">
-                        <span className="right-quote">
-                            <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
-                        </span>
-                        <span className="left-quote">
-                            <FontAwesomeIcon icon={faQuoteLeft}></FontAwesomeIcon>
-                        </span>
-
-                        <div className="image">
-                            <Image src="/mohztec-images/man1.jpg" alt="" fill />
-
-
-                        </div>
-                        <div className="texts">
-                            <div className="stars">
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quidem excepturi illo distinctio quaerat ipsum similique, natus voluptates,
-                                repudiandae labore incidunt repellendus perferendis?</p>
-                            <div className="name">
-                                <span>Roland Rich</span>
-                                <span>C.E.O Mohztec Technologies</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="testifiers">
-                        <span className="right-quote">
-                            <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
-                        </span>
-                        <span className="left-quote">
-                            <FontAwesomeIcon icon={faQuoteLeft}></FontAwesomeIcon>
-                        </span>
-
-                        <div className="image">
-                            <Image src="/mohztec-images/man1.jpg" alt="" fill />
-
-
-                        </div>
-                        <div className="texts">
-                            <div className="stars">
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quidem excepturi illo distinctio quaerat ipsum similique, natus voluptates,
-                                repudiandae labore incidunt repellendus perferendis?</p>
-                            <div className="name">
-                                <span>Roland Rich</span>
-                                <span>C.E.O Mohztec Technologies</span>
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                {mapTestimonies}
 
             </Swiper>
 
