@@ -25,21 +25,21 @@ const Testimonial = () => {
 
     const testimony = [
         {
-            img: '/mohztec-images/testimony/ope.Jpg',
+            img: '/mohztec-images/testimony/ope.JPG',
             name: "Mr Ope",
             position: "C.E.O of Gadjet Care Technology",
             testimony: "Mohztec technologies is the best in solar technologies. He installed a 2.5kva solar setup and it's still woking perfectly. Thank you sir, I sincerly appreciate your work.",
 
         },
         {
-            img: '/mohztec-images/testimony/femi.Jpg',
+            img: '/mohztec-images/testimony/femi.JPG',
             name: "Mr Femi",
             position: "Senior Software developer",
             testimony: " Moses knows his craft very well. I had issues with my house wiring and within minutes, he has figured out the problem and restored my power, and up till now, i'm enjoying it.",
 
         },
         {
-            img: '/mohztec-images/testimony/Prof S.A Adedunkan.Jpg',
+            img: '/mohztec-images/testimony/Prof S.A Adedunkan.JPG',
             name: "Prof S.A Adedunkan",
             position: "Professor/Director FUTA ",
             testimony: " Very responsive and kind as well. Treats customers with maximum respect. He did IoT home automation with Alexa and he delivered the job excellently",
@@ -53,7 +53,7 @@ const Testimonial = () => {
 
         },
         {
-            img: '/mohztec-images/testimony/sola.Jpg',
+            img: '/mohztec-images/testimony/sola.JPG',
             name: "Mr Shola",
             position: "C.E.O Mixi Arts",
             testimony: " Thank you moses for all you do. Your kind gesture is very rare. You helped with my CCTV installation and also in giving professional consultancy advice.",
@@ -77,7 +77,7 @@ const Testimonial = () => {
     ]
     const mapTestimonies = testimony.map((testimony, index) => {
         return (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
                 <div className="testifiers">
                     <span className="right-quote">
                         <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>

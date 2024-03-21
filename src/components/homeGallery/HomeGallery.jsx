@@ -90,7 +90,7 @@ export const HeroSwiper = () => {
     const slideItems = [
         {
             title: 'Solar power system installation for homes and offices.',
-            img: "/mohztec-images/Solar/2023_04_20_20_05_IMG_9768.Jpg"
+            img: "/mohztec-images/Solar/2023_04_20_20_05_IMG_9768.JPG"
         },
         {
             title: 'We provide the best and permanent electrical power solution ',

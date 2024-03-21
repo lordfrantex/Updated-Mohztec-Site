@@ -16,7 +16,7 @@ const ProjectOptions = () => {
         <div className="text-center">
             <label>
                 <select className="p-2 rounded-2" value={option} onChange={handleChange}>
-                    <option value={""}>Select Project's Category</option>
+                    <option value={""}>Select Category</option>
                     <option value={""}>View all</option>
                     <option>Solar</option>
                     <option>CCTV</option>
