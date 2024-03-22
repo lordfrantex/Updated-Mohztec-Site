@@ -17,9 +17,9 @@ const HomeGallery = () => {
     const imageGallery = [
         "/mohztec-images/Solar/IMG_9504.JPG",
         "/mohztec-images/INVERTER-SETUP/IMG_8343.JPG",
-        "/mohztec-images/cctv/IMG_8886.JPG",
+        "/mohztec-images/CCTV/IMG_8886.JPG",
         "/mohztec-images/lighting/IMG_7305.JPG",
-        "/mohztec-images/solar/2023_01_04_18_36_IMG_1951.JPG",
+        "/mohztec-images/Solar/2023_01_04_18_36_IMG_1951.JPG",
         "/mohztec-images/INVERTER-SETUP/IMG_3830.JPG",
 
     ]
@@ -167,75 +167,3 @@ export const HeroSwiper = () => {
     )
 }
 
-
-
-
-
-
-// export const HeroSwiper = () => {
-
-//     const img = '/mohztec-images/solar1o.jpg'
-//     const slideItems = [
-//         {
-//             title: 'Solar power system installation for homes and offices.'
-//         },
-//         {
-//             title: 'We provide the best and permanent electrical power solution '
-//         },
-//         {
-//             title: 'We provide unique services. Go Solar today with Mohztec Technologies'
-//         },
-//         {
-//             title: 'Secure your environment with Mohztec Technologies (CCTV Installation)'
-//         },
-//         {
-//             title: 'Integrate smart home automation with Mohztec\'s IoT '
-//         },
-//     ]
-
-//     const swiperSlide = slideItems.map((item, index) => {
-//         return (
-//             <SwiperSlide key={index}>
-//                 <div className="swiper-content row g-4">
-//                     <div className="col-12 col-md-8 m-auto col-lg-5 ">
-//                         <div className="swiper-desc text-center text-lg-start">
-//                             <h1 data-aos='fade-up'>{item.title}</h1>
-//                             <div className=" mt-5 enquiry">
-//                                 <button className=''> <Link href="/request-quote">Get Quote</Link></button>
-//                             </div>
-//                         </div>
-//                     </div>
-//                     <div className="col-12 col-lg-6 ">
-//                         <div className="swiper-image ">
-//                             <Image priority src={img} alt="" width={1000} height={400} />
-//                         </div>
-//                     </div>
-//                 </div>
-//             </SwiperSlide>
-//         )
-//     })
-
-
-//     return (
-//         <div>
-//             <Swiper modules={[Navigation, Pagination, A11y, Autoplay]}
-//                 centeredSlides={true}
-//                 autoplay={{
-//                     delay: 7000,
-//                     disableOnInteraction: false,
-//                 }}
-//                 spaceBetween={10}
-//                 slidesPerView={1}
-//                 navigation
-//                 pagination={{ clickable: true }}
-//                 grabCursor={true}
-//                 loop={true}
-//                 className={`display-container container-xxl`}
-//             >
-//                 <div className="swiper-background">
-//                     {swiperSlide}
-//                 </div>
-//             </Swiper >
-//         </div>
-//     )
-// }
