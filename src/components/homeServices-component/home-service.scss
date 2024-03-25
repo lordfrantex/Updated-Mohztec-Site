@@ -4,7 +4,7 @@
       top: 50%;
     }
     to {
-      top: 35%;
+      top: 75%;
     }
   }
   .heading-texts{
@@ -13,8 +13,7 @@ color: $complementary-color;
 font-size: 36px;
     }
     h4{
-font-size: 40px;
-font-weight: 600;
+font-size: 30px;
     }
   }
   .home-achievements span {
@@ -28,7 +27,7 @@ font-weight: 600;
   }
   
   .home-about-image {
-    position: relative;
+    // position: relative;
     max-width: 650px;
     height: 500px;
     img{
@@ -45,10 +44,16 @@ font-weight: 600;
     position: absolute;
     animation: linear-transit 5s linear infinite alternate;
     left: 0;
-    width: 200px;
-    height: 200px;
-    transform: translate(-30%, -50%);
-    border: 9px solid white;
+    width: 150px;
+    height: 150px;
+    transform: translate(-15%, -50%);
+    border: 9px solid $complementary-color;
+    @media (max-width:400px){
+      &{
+        width: 150px;
+        height: 150px;
+      }
+    }
   }
   
   .about-container {

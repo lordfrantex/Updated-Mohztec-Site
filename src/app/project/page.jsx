@@ -52,7 +52,7 @@ const Projects = async ({ searchParams }) => {
                             <p className='title display-5'> Title:{project.title} </p>
                             <p className='category'> Category: {project.category} </p>
                             <p>{project.description}</p>
-                            <button className='btn mb-3 btn-secondary'>Learn more</button>
+                            {/* <button className='btn mb-3 btn-secondary'>Learn more</button> */}
                         </div>
                     </div>
                     <div className="col-12 col-md-6">

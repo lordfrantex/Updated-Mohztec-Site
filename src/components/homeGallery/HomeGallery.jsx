@@ -37,7 +37,7 @@ const HomeGallery = () => {
             <div className="text-center">
                 <div className="col-md-5 text-center heading-texts  m-auto container">
                     <h3 data-aos='fade-up' className={`p-3 mb-3 rounded-pill  d-inline-block ${yellowtail.className}`}>Photo Gallery</h3>
-                    <h4 data-aos='fade-up'>View some of our outstanding works.</h4>
+                    <h4 data-aos='fade-up'>View some of our works.</h4>
                 </div>
 
             </div>
@@ -127,7 +127,7 @@ export const HeroSwiper = () => {
                     <div className="col-12 col-md-8 m-auto col-lg-5 ">
                         <div className="swiper-desc text-center text-lg-start">
                             <h1>{item.title}</h1>
-                            <div className=" mt-5 enquiry">
+                            <div className=" mt-2 enquiry">
                                 <button className=''> <Link href="/request-quote">Get Quote</Link></button>
                             </div>
                         </div>

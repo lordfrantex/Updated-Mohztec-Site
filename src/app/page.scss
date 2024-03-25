@@ -22,11 +22,39 @@
         }
     }
     .swiper-image{
+        img{
+            border-radius: 10px;
+        }
         height: 410px;
         position: relative;
+        &::after{
+            width: 200px;
+            height: 50px;
+            background-color: $brand-color;
+            background: linear-gradient(to left,$brand-color,rgb(50, 115, 214));
+
+            content: "";
+            position: absolute;
+            top: -7px;
+            z-index: -1;
+            left: -7px;
+            border-radius: 10px;
+        }
+        &::before{
+            width: 200px;
+            height: 50px;
+            background: linear-gradient(to left,$brand-color,rgb(50, 115, 214));
+
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            z-index: -1;
+            right: -7px;
+            border-radius: 10px;
+        }
         @media (max-width:400px){
             &{
-               height: 250px;
+               height: 200px;
             }
         }
     }
@@ -36,7 +64,7 @@
     h1{
         color: white;
         font-weight: 800;
-        line-height: 1.5;
+        line-height: 1.1;
     }
     .enquiry{
         button{
@@ -47,6 +75,7 @@
             border: 0;
             outline: none;
             padding: 15px;
+            border-radius: 10px;
             background-color: $brand-color;
         }
         a{

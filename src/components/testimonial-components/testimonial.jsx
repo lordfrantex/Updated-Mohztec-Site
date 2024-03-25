@@ -73,6 +73,13 @@ const Testimonial = () => {
             testimony: "Mohztec is amazing. All my home appliances are effectively running on solar. Uninterrupted power supply.",
 
         },
+        {
+            img: '/mohztec-images/testimony/shallangwa.jpg',
+            name: "Officer Shallangwa",
+            position: "NAF Officer",
+            testimony: "Mohztec is amazing. All my home appliances are effectively running on solar. Uninterrupted power supply.",
+
+        },
 
     ]
     const mapTestimonies = testimony.map((testimony, index) => {

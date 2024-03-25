@@ -149,7 +149,7 @@ const Training = () => {
                             <div className="team-card-image">
                                 <img src="//mohztec-images/moses.jpg" alt="" />
                             </div>
-                            <p>Name: Moses Okocha</p>
+                            <p>Name:Engr. Moses Okocha</p>
                             <p className="title">Team Leader / C.E.O</p>
                         </div>
                     </div>
@@ -159,7 +159,7 @@ const Training = () => {
                             <div className="team-card-image">
                                 <img src="//mohztec-images/man1.jpg" alt="" />
                             </div>
-                            <p>Name: Moses Okocha</p>
+                            <p>Name:Engr. Moses Okocha</p>
                             <p className="title">Team Leader / C.E.O</p>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ const Training = () => {
                             <div className="team-card-image">
                                 <img src="//mohztec-images/man2.jpg" alt="" />
                             </div>
-                            <p>Name: Moses Okocha</p>
+                            <p>Name:Engr. Moses Okocha</p>
                             <p className="title">Team Leader / C.E.O</p>
                         </div>
                     </div>
@@ -179,7 +179,7 @@ const Training = () => {
                             <div className="team-card-image">
                                 <img src="//mohztec-images/man2.jpg" alt="" />
                             </div>
-                            <p>Name: Moses Okocha</p>
+                            <p>Name:Engr. Moses Okocha</p>
                             <p className="title">Team Leader / C.E.O</p>
                         </div>
                     </div>

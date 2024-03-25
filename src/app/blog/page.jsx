@@ -4,7 +4,7 @@ import './blog.scss';
 
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faLinkedinIn, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faLinkedinIn, faTiktok, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import TypeWriter, { SwiperComponent } from './TypeWriter';
 import Image from 'next/image';
 import { Yellowtail } from 'next/font/google'
@@ -31,9 +31,9 @@ const Blog = async ({ searchParams }) => {
                     <div className="border rounded-5 ">
                         <Image height={250} width={400} src={imgURL} alt={title} />
                         <h4 className='mx-2 fw-bold fs-5'>Title: {title}</h4>
-                        <div className="d-flex mx-2 align-items-center justify-content-between">
-                            <span className='posted-at m-0 fst-italic'>{createdAt.substring(0, 10)}</span>
-                            <span className='m-0 fs-6 author ms-auto fst-italic'>By {author}</span>
+                        <div className="d-flex mx-2 align-items-center justify-content-between info">
+                            <span className=' fst-italic'>{createdAt.substring(0, 10)}</span>
+                            <span className='author ms-auto fst-italic'>By {author}</span>
                         </div>
                         <p className='mx-2'>{description}</p>
                         <Link href={`/blog/${id}`}> <button>Read More</button></Link>
@@ -57,7 +57,7 @@ const Blog = async ({ searchParams }) => {
             <div className="technology my-5 container border">
 
                 <SwiperComponent />
-                <div className="tech-writeup">
+                <div className='tech-writeup'>
                     <h4 className={yellowtail.className}>Technology</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe error aspernatur itaque,
                         consequatur pariatur dolorem mollitia. Ipsa minus pariatur in ad aut! Temporibus corrupti
@@ -68,10 +68,27 @@ const Blog = async ({ searchParams }) => {
                     <div className="tech-icons">
                         <p> Follow us via </p>
                         <div className="icons ">
-                            <FontAwesomeIcon icon={faFacebook} width={30} height={30} />
-                            <FontAwesomeIcon icon={faTwitter} width={30} height={30} />
-                            <FontAwesomeIcon icon={faLinkedinIn} width={30} height={30} />
-                            <FontAwesomeIcon icon={faTiktok} width={30} height={30} />
+
+                            <span data-aos='zoom-in'>
+                                <Link href='https://www.facebook.com/p/Mohztec-Technologies-100057766414382/'>
+                                    <FontAwesomeIcon icon={faFacebook} height={40} width={40} />
+                                </Link>
+                            </span>
+                            <span data-aos='zoom-in'>
+                                <Link href='https://www.tiktok.com/@mohztec'>
+                                    <FontAwesomeIcon icon={faTiktok} height={40} width={40} />
+                                </Link>
+                            </span>
+                            <span data-aos='zoom-in'>
+                                <Link href='https://www.instagram.com/mohztectechnologies/'>
+                                    <FontAwesomeIcon icon={faInstagram} height={40} width={40} />
+                                </Link>
+                            </span>
+                            <span data-aos='zoom-in'>
+                                <Link href='https://www.youtube.com/channel/UCy1RGhnaprl3vPVMSqWbpdA'>
+                                    <FontAwesomeIcon icon={faYoutube} height={40} width={40} />
+                                </Link>
+                            </span>
                         </div>
                     </div>
                 </div>

@@ -73,9 +73,9 @@ const About = () => {
 
                             <div className="team-card p-3">
                                 <div className="team-card-image">
-                                    <Image fill src="/mohztec-images/team/moses2.jpg" alt="" />
+                                    <Image fill src="/mohztec-images/team/moses2.jpg" alt="" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                                 </div>
-                                <p>Name: Moses Okocha</p>
+                                <p>Name:Engr. Moses Okocha</p>
                                 <p className="title">Team Leader / C.E.O</p>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ const About = () => {
                                 <div className="team-card-image">
                                     <Image fill src="/mohztec-images/team/ope.jpg" alt="" />
                                 </div>
-                                <p>Name: Moses Okocha</p>
+                                <p>Name:Engr. Moses Okocha</p>
                                 <p className="title">Field Cordinator</p>
                             </div>
                         </div>

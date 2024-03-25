@@ -64,15 +64,17 @@ const RequestQuote = () => {
                                     <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
                                 </label>
                                 <br />
-                                <label>
-                                    *Required Load/Devices to be powered:
-                                    <input type="text" name="loads" value={formData.loads} onChange={handleChange} />
-                                </label>
+                                <select className='py-2'>
+                                    <option name="" value='' id="">* Select category...</option>
+                                    <option name="Solar" id="">Solar</option>
+                                    <option name="CCTV" id="">CCTV</option>
+                                    <option name="IoT" id="">IoT</option>
+                                    <option name="Electrical" id="">Electrical</option>
+                                </select>
                                 <br />
-
                                 <label>
                                     *Message:
-                                    <textarea name="message" value={formData.message} onChange={handleChange}></textarea>
+                                    <textarea name="message" value={formData.message} placeholder='Explain the quote you are requesting (E.g Solar, CCTV,Electrical or IoT Quotes...)' rows={10} onChange={handleChange}></textarea>
                                 </label>
                                 <br />
 
@@ -94,13 +96,16 @@ const RequestQuote = () => {
                         <div className="">
                             <h3 className='fw-bold'>Step 1</h3>
                             <p>Submit the details of the quotation you want</p>
+                            <p>In the message session, Tell us the kind of services that you are requesting for.</p>
+
                         </div>
                     </div>
+
                     <div className="d-flex gap-3 mt-3 steps">
                         <FontAwesomeIcon icon={faMessage} fontSize={40} width={40} />
                         <div className="">
                             <h3 className='fw-bold'>Step 2</h3>
-                            <p>We will contact you to get additional info if needed</p>
+                            <p>Click on the submit button to submit your enquiry, and we will contact you to get additional info if needed, and we will send you your quote.</p>
                         </div>
                     </div>
                 </div>

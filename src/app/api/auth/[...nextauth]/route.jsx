@@ -17,8 +17,8 @@ const handler = NextAuth({
             profile(profile) {
                 let role;
                 if (
-                    profile.email === "lordfranktex@gmail.com" ||
-                    profile.email === "mosesokocha@gmail.com"
+                    profile.email === process.env.AMIN_1 ||
+                    profile.email === process.env.AMIN_2
                 ) {
                     role = "admin";
                 } else {
@@ -54,7 +54,6 @@ const handler = NextAuth({
         CredentialsProvider({
             name: "credentials",
             credentials: {
-                // username: { label: "name", type: "text", placeholder: "Input Your Username" },
                 username: { label: "email", type: "email", placeholder: "Input Your email" },
                 password: { label: "Password", type: "password", placeholder: "Input Your Password" }
             },

@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './footer.scss'
-import { faAddressBook, faClock, faMobileScreen, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { faAddressBook, faClock, faMobileScreen, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 import { faFacebook, faInstagram, faLinkedinIn, faTiktok, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import Link from 'next/link'
@@ -16,7 +16,7 @@ const Footer = () => {
                                     <Image src='/mohztec-images/logo.png' width={120} height={120} alt='' />
                                 </div>
 
-                                <div className="subscribe">
+                                {/* <div className="subscribe">
                                     <p data-aos='fade-up'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aliquam impedit, doloremque non iste expedita. Soluta animi quasi at laborum quidem.
                                         Perspiciatis, necessitatibus consequuntur libero quo quis voluptates laboriosam voluptatem!</p>
                                     <h3 data-aos='fade-up' className='my-5'>Subscribe To Our News Letter</h3>
@@ -24,9 +24,9 @@ const Footer = () => {
                                         <input type="email" placeholder='Enter Your Email Here.' />
                                         <span className=''><FontAwesomeIcon icon={faPaperPlane} height={20} width={20} /></span>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className='social-media overflow-hidden  my-4'>
-                                    <h5 data-aos='fade-up' className=''>You can follow us on our social medias below:</h5>
+                                    <h5 data-aos='fade-up' className=''>We are active on all our social media. Get updated about our products and services by following us:</h5>
 
                                     <div className="social-icons my-5 justify-content-lg-start justify-content-center">
                                         <span data-aos='zoom-in'>
@@ -76,8 +76,8 @@ const Footer = () => {
 
                                         <div className="phonenumber">
                                             <h3 className='fw-bold'>Contacts</h3>
-                                            <p>+234 8132790521</p>
-                                            <p>+234 8051040368</p>
+                                            <p className='d-flex align-items-center gap-2 '><span> <FontAwesomeIcon icon={faPhone} width={20} /> </span><span> +234 8132790521</span></p>
+                                            <p className='d-flex align-items-center gap-2 '><span> <FontAwesomeIcon icon={faPhone} width={20} /> </span><span> +234 8051040368</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@ const Footer = () => {
 
 
 
-                            <div className="lower-col mt-3 text-center text-lg-start g-3 row">
+                            {/* <div className="lower-col mt-3 text-center text-lg-start g-3 row">
                                 <div className="col-7 col-md-4">
                                     <div data-aos='zoom-in' className="quicklinks ">
                                         <h3 className='fw-bold'>Quick Links</h3>
@@ -138,7 +138,7 @@ const Footer = () => {
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
