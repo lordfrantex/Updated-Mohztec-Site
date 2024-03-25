@@ -9,7 +9,7 @@ import AOSInit from '@/components/Aos-component/Aos'
 import AuthProvider from '@/providers/AuthProvider'
 import Preloader from '@/components/preloader-component/Preloader'
 import ToastContext from '../../context/ToastContext'
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Montserrat, } from 'next/font/google'
 const montserrat = Montserrat({ subsets: ['latin'], weight: "700" })
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -35,6 +35,7 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           <ThemeContext>
             {/* <Preloader /> */}
+            <SpeedInsights />
             <ToastContext />
             <BootstrapClient />
             <AOSInit />
