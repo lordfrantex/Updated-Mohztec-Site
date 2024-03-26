@@ -14,13 +14,14 @@ import { Montserrat, } from 'next/font/google'
 const montserrat = Montserrat({ subsets: ['latin'], weight: "700" })
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import Head from 'next/head'
 config.autoAddCss = false
 
 
 export const metadata = {
 
-  title: 'Mohztec Technologies',
-  description: 'Mohztec Technologies | Experts in Solar, Electrical, and IoT installations; together with sales of solar and electrical materials. ',
+  title: 'Mohztec Technologies ▶️ Solar | CCTV | Electrical | IoT | Training ',
+  description: 'Mohztec Technologies is a leading, global and technological company that provides cutting-edge innovations through expertise in Solar, CCTV, Electrical, and IoT installations; together with sales of quality materials such as Solar Panel, Solar Battries, Electrical Cables, CCTV Cameras, e.t.c. ',
 }
 
 
@@ -30,6 +31,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
       <body className={montserrat.className}>
 
         <AuthProvider>
