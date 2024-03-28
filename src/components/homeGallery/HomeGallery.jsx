@@ -125,7 +125,7 @@ export const HeroSwiper = () => {
 
         },
         {
-            title: 'We provide unique Solar-Inverter services. Go Solar today with Mohztec Technologies',
+            title: 'We provide unique Solar-Inverter services, Go Solar today.',
             img: "/mohztec-images/Solar/IMG-20240319-WA0008.jpg"
 
         },
