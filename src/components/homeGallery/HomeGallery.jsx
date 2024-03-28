@@ -49,6 +49,7 @@ const HomeGallery = () => {
                 }}
                 spaceBetween={5}
                 slidesPerView="auto"
+                initialSlide='0'
                 breakpoints={{
                     0: {
                         slidesPerView: 1,
@@ -89,6 +90,11 @@ export const HeroSwiper = () => {
 
     const slideItems = [
         {
+            title: 'We provide unique Solar-Inverter services, Go Solar today.',
+            img: "/mohztec-images/Solar/IMG-20240319-WA0008.jpg"
+
+        },
+        {
             title: 'Solar power system installation for homes and offices.',
             img: "/mohztec-images/Solar/2023_04_20_20_05_IMG_9768.JPG"
         },
@@ -99,7 +105,7 @@ export const HeroSwiper = () => {
         },
 
         {
-            title: 'Secure your environment with Mohztec Technologies (CCTV Installation)',
+            title: 'Secure your environment with our CCTV Cameras',
             img: "/mohztec-images/CCTV/2022_06_28_14_41_IMG_1809.JPG"
 
         },
@@ -110,7 +116,12 @@ export const HeroSwiper = () => {
         },
         {
             title: 'Interior decoration and aesthetics with Mohztec\'s lightenings ',
-            img: "/mohztec-images/lighting/IMG_1991.JPG"
+            img: "/mohztec-images/lighting/IMG-20240328-WA0001.jpg"
+
+        },
+        {
+            title: 'Top notch and creative lighting design ',
+            img: "/mohztec-images/lighting/IMG_7305.JPG"
 
         },
         {

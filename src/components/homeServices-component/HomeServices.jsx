@@ -221,7 +221,7 @@ const HomeServices = () => {
                                                     </div>
                                                     <div className="mt-1">
                                                         <h6 className='p-0 m-0'>Call us anytime</h6>
-                                                        <p className='m-0'>+234 8051040368</p>
+                                                        <p className='m-0'>+234 8132790521</p>
                                                     </div>
                                                 </div>
                                             </div>

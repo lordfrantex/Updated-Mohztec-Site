@@ -28,42 +28,42 @@ const Testimonial = () => {
             img: '/mohztec-images/testimony/ope.JPG',
             name: "Mr Ope",
             position: "C.E.O of Gadjet Care Technology",
-            testimony: "Mohztec technologies is the best in solar technologies. He installed a 2.5kva solar setup and it's still woking perfectly. Thank you sir, I sincerly appreciate your work.",
+            testimony: "Mohztec technologies are the best in solar technologies and CCTV installation. My solar setup and CCTV have been working 24/7 without any issues.",
 
         },
         {
             img: '/mohztec-images/testimony/femi.JPG',
             name: "Mr Femi",
             position: "Senior Software developer",
-            testimony: " Moses knows his craft very well. I had issues with my house wiring and within minutes, he has figured out the problem and restored my power, and up till now, i'm enjoying it.",
+            testimony: " Mohztec Technologies are very reliable, and they as well use quality materials and equipment. My solar setup is over 2 years and still working perfectly.",
 
         },
         {
             img: '/mohztec-images/testimony/Prof S.A Adedunkan.JPG',
             name: "Prof S.A Adedunkan",
             position: "Professor/Director FUTA ",
-            testimony: " Very responsive and kind as well. Treats customers with maximum respect. He did IoT home automation with Alexa and he delivered the job excellently",
+            testimony: "Thanks to Mohztec Technologies, They rectified a very challenging electrical fault in the department when I was still the HOD of FWT, SAAT, FUTA.They are very responsive and kind as well.",
 
         },
         {
             img: '/mohztec-images/testimony/boli.jpg',
             name: "Shally tech",
             position: "C.E.O Boli Reloaded ",
-            testimony: " Wow... I am super proud of mohztec. He designed my workspace with beautiful interior lights and it's just so amazing.",
+            testimony: " Wow... I am super proud of Mohztec Technologies. They run my solar-inverter, electrical and lightings works. They are very good in what they do, i am always impressed with their skills and experienced performance, they can go extra miles just to satisfy client.",
 
         },
         {
             img: '/mohztec-images/testimony/sola.JPG',
             name: "Mr Shola",
             position: "C.E.O Mixi Arts",
-            testimony: " Thank you moses for all you do. Your kind gesture is very rare. You helped with my CCTV installation and also in giving professional consultancy advice.",
+            testimony: " Mohztec to the world 🌐. A company you can rely on. They handle all my electrical and solar work perfectly and up to satisfaction.",
 
         },
         {
             img: '/mohztec-images/testimony/jomiloju.jpg',
             name: " Jomiloju",
             position: "Senior Backend Engineer",
-            testimony: "Moses installed a 3.5kva inverter system and i have been enjoying unlimited power. Thanks for the good and professional work.",
+            testimony: "Thanks for the good and professional work. My solar, electrical, lighting are all done by Mohztec Technologies, They are the best. MOHZTEC OR NOTHING.",
 
         },
         {
@@ -77,7 +77,7 @@ const Testimonial = () => {
             img: '/mohztec-images/testimony/shallangwa.jpg',
             name: "Officer Shallangwa",
             position: "NAF Officer",
-            testimony: "Mohztec is amazing. All my home appliances are effectively running on solar. Uninterrupted power supply.",
+            testimony: "Mohztec technologies installed a durable 2.5kva solar inverter system for me. Their work is very neat and quality, they have good customer service as well. Kudos to Mohztec Technologies.",
 
         },
 
