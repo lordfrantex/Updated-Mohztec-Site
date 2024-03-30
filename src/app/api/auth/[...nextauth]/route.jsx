@@ -17,8 +17,8 @@ const handler = NextAuth({
             profile(profile) {
                 let role;
                 if (
-                    profile.email === process.env.AMIN_1 ||
-                    profile.email === process.env.AMIN_2
+                    profile.email === process.env.ADMIN_1 ||
+                    profile.email === process.env.ADMIN_2
                 ) {
                     role = "admin";
                 } else {
@@ -87,7 +87,7 @@ const handler = NextAuth({
 
                 // return user if password match, assign role based on email
                 let role
-                if (user.email === "lordfranktex@gmail.com" || user.email === "mosesokocha@gmail.com") {
+                if (user.email === process.env.ADMIN_1 || user.email === process.env.ADMIN_2) {
                     role = "admin"
                 } else {
                     role = "user"
