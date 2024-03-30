@@ -2,6 +2,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPersonChalkboard, faSmileBeam, faSmileWink, faUserGear, faWheatAwnCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 import { faCheckCircle } from '@fortawesome/free-regular-svg-icons'
 import './achievements.scss'
+import { Yellowtail } from 'next/font/google'
+const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400", display: "swap" })
+
 const Achievements = () => {
 
 
@@ -10,7 +13,7 @@ const Achievements = () => {
             <div className="container-xxl  my-5 show-bar-container p-1">
                 <div className=" container">
                     <div className="text-center home-achievements">
-                        <span className=''>Our Achievements</span>
+                        <span className={yellowtail.className}>Our Achievements</span>
                     </div>
                     <div className="row g-4  justify-content-center">
                         <div data-aos='zoom-in' className="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">

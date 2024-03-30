@@ -65,8 +65,6 @@ const Footer = () => {
                                         <FontAwesomeIcon icon={faAddressBook} width={70} height={70} />
                                         <h4>Addresses</h4>
                                         <p>Shop 3, Iyaniwura Shopping Complex, Akure, Ondo State, Nigeria.</p>
-                                        <p>Shop 3, Iyaniwura Shopping Complex, Akure, Ondo State, Nigeria.</p>
-                                        <p>Shop 3, Iyaniwura Shopping Complex, Akure, Ondo State, Nigeria.</p>
 
                                     </div>
                                 </div>

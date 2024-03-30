@@ -15,11 +15,12 @@ import { Yellowtail } from 'next/font/google';
 const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400" })
 const HomeGallery = () => {
     const imageGallery = [
-        "/mohztec-images/Solar/IMG_9504.JPG",
         "/mohztec-images/INVERTER-SETUP/IMG_8343.JPG",
         "/mohztec-images/CCTV/IMG_8886.JPG",
-        "/mohztec-images/lighting/IMG_7305.JPG",
-        "/mohztec-images/Solar/2023_01_04_18_36_IMG_1951.JPG",
+        "/mohztec-images/CCTV/IMG-20240329-WA0009.JPG",
+        "/mohztec-images/Solar/IMG-20240329-WA0018.jpg",
+        "/mohztec-images/lighting/IMG_1991.jpg",
+        "/mohztec-images/IOT/IMG-20240330-WA0000.jpg",
         "/mohztec-images/INVERTER-SETUP/IMG_3830.JPG",
 
     ]
@@ -49,7 +50,6 @@ const HomeGallery = () => {
                 }}
                 spaceBetween={5}
                 slidesPerView="auto"
-                initialSlide='0'
                 breakpoints={{
                     0: {
                         slidesPerView: 1,
@@ -77,6 +77,9 @@ const HomeGallery = () => {
                     {mapImages}
                 </div>
             </Swiper >
+            <div className='text-center my-5 view-more'>
+                <Link href='/project' className=' border btn btn-lg'>View More</Link>
+            </div>
         </div >
 
     )
@@ -89,9 +92,14 @@ export default HomeGallery
 export const HeroSwiper = () => {
 
     const slideItems = [
+        // {
+        //     title: 'We provide unique Solar-Inverter services, Go Solar today.',
+        //     img: "/mohztec-images/Solar/IMG-20240319-WA0008.jpg"
+
+        // },
         {
-            title: 'We provide unique Solar-Inverter services, Go Solar today.',
-            img: "/mohztec-images/Solar/IMG-20240319-WA0008.jpg"
+            title: 'Secure your environment with our CCTV Cameras',
+            img: "/mohztec-images/CCTV/IMG-20240329-WA0006.jpg"
 
         },
         {
@@ -104,24 +112,30 @@ export const HeroSwiper = () => {
 
         },
 
-        {
-            title: 'Secure your environment with our CCTV Cameras',
-            img: "/mohztec-images/CCTV/2022_06_28_14_41_IMG_1809.JPG"
 
-        },
         {
             title: 'Integrate smart home automation with Mohztec\'s IoT ',
             img: "/mohztec-images/IOT/2024_03_19_15_10_IMG_0441.JPG"
 
         },
         {
-            title: 'Interior decoration and aesthetics with Mohztec\'s lightenings ',
+            title: 'Creative TV console lighting and interior lighting.',
             img: "/mohztec-images/lighting/IMG-20240328-WA0001.jpg"
 
         },
         {
-            title: 'Top notch and creative lighting design ',
+            title: 'Top notch profile lighting and design ',
             img: "/mohztec-images/lighting/IMG_7305.JPG"
+
+        },
+        {
+            title: 'Electrical fault troubleshooting and rectification ',
+            img: "/mohztec-images/Electrical/IMG-20240329-WA0015.jpg"
+
+        },
+        {
+            title: 'Durable solar street light installation ',
+            img: "/mohztec-images/Solar/IMG-20240329-WA0016.jpg"
 
         },
         {

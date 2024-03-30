@@ -1,0 +1,6 @@
+@use '../../../scss/helpers/_variables.scss' as *;
+
+.view-more a{
+background-color: $brand-color;
+color: white;
+}

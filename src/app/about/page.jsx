@@ -93,9 +93,9 @@ const About = () => {
 
                             <div className="team-card p-3">
                                 <div className="team-card-image">
-                                    <Image fill src="/mohztec-images/team/ope.jpg" alt="" />
+                                    <Image fill src="/mohztec-images/team/IMG-20240329-WA0008.jpg" alt="" />
                                 </div>
-                                <p>Name:Engr. Moses Okocha</p>
+                                <p>Name:Engr. Opeyemi</p>
                                 <p className="title">Field Cordinator</p>
                             </div>
                         </div>
