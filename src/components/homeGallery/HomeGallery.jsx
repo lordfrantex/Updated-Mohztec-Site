@@ -17,9 +17,9 @@ const HomeGallery = () => {
     const imageGallery = [
         "/mohztec-images/INVERTER-SETUP/IMG_8343.JPG",
         "/mohztec-images/CCTV/IMG_8886.JPG",
-        "/mohztec-images/CCTV/IMG-20240329-WA0009.JPG",
+        "/mohztec-images/CCTV/IMG-20240329-WA0009.jpg",
         "/mohztec-images/Solar/IMG-20240329-WA0018.jpg",
-        "/mohztec-images/lighting/IMG_1991.jpg",
+        "/mohztec-images/lighting/IMG_1991.JPG",
         "/mohztec-images/IOT/IMG-20240330-WA0000.jpg",
         "/mohztec-images/INVERTER-SETUP/IMG_3830.JPG",
 
