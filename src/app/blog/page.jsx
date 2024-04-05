@@ -8,6 +8,7 @@ import { faFacebook, faInstagram, faLinkedinIn, faTiktok, faTwitter, faYoutube }
 import TypeWriter, { SwiperComponent } from './TypeWriter';
 import Image from 'next/image';
 import { Yellowtail } from 'next/font/google'
+import parse from 'html-react-parser';
 const yellowtail = Yellowtail({ subsets: ['latin'], weight: "400", display: "swap" })
 
 const fetchBlog = async (data) => {
@@ -31,11 +32,13 @@ const Blog = async ({ searchParams }) => {
                     <div className="border rounded-5 ">
                         <Image height={250} width={400} src={imgURL} alt={title} />
                         <h4 className='mx-2 fw-bold fs-5'>Title: {title}</h4>
-                        <div className="d-flex mx-2 align-items-center justify-content-between info">
+                        <div className="d-flex p-2 align-items-center justify-content-between info">
                             <span className=' fst-italic'>{createdAt.substring(0, 10)}</span>
                             <span className='author ms-auto fst-italic'>By {author}</span>
                         </div>
-                        <p className='mx-2'>{description}</p>
+
+                        <div className='mx-2 trim'> {parse(description)} </div>
+
                         <Link href={`/blog/${id}`}> <button>Read More</button></Link>
                     </div>
                 </div>
@@ -59,12 +62,10 @@ const Blog = async ({ searchParams }) => {
                 <SwiperComponent />
                 <div className='tech-writeup'>
                     <h4 className={yellowtail.className}>Technology</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe error aspernatur itaque,
-                        consequatur pariatur dolorem mollitia. Ipsa minus pariatur in ad aut! Temporibus corrupti
-                        nisi atque tenetur incidunt, obcaecati iste?</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe error aspernatur itaque,
-                        consequatur pariatur dolorem mollitia. Ipsa minus pariatur in ad aut! Temporibus corrupti
-                        nisi atque tenetur incidunt, obcaecati iste?</p>
+                    <p>Technological innovation stands as a cornerstone of human progress, bringing about transformative changes across multiple spheres of life including electrical, CCTV, and IoT technologies, leading to remarkable advancements and benefits.</p>
+                    <p>In the electrical domain, innovations such as smart grids, energy-efficient appliances, and renewable energy sources have revolutionized power distribution and consumption. Smart grids enable efficient monitoring and management of electricity flow, optimizing energy usage and reducing wastage. </p>
+                    <p>IoT (Internet of Things) technologies have ushered in a new era of connectivity and automation. IoT devices, such as smart sensors and actuators, enable the integration of physical devices with the internet, allowing for seamless data exchange and automation of various processes. In sectors like home automation, healthcare, and manufacturing, IoT technologies enhance efficiency, convenience, and productivity.</p>
+
                     <div className="tech-icons">
                         <p> Follow us via </p>
                         <div className="icons ">

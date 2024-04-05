@@ -7,6 +7,8 @@ import PostComment, { DeleteComment } from "./PostComment"
 import '../blog.scss'
 import MapComment from "./MapComment"
 import { Yeseva_One } from "next/font/google"
+import parse from 'html-react-parser';
+
 
 
 
@@ -67,9 +69,9 @@ const SingleBlog = async ({ params }) => {
 
     const mapRelatedBlogs = related?.map((blog, index) => {
         return (
-            <Link key={blog.id} href={`/blog/${blog.id}`} className="related-blog">
+            <Link key={blog.id} href={`/blog/${blog.id}`} className="d-flex gap-3 my-3 p-3 related-blog">
                 <div className="related-blog-image">
-                    <Image width={200} height={100} src={blog.imgURL} alt="mohztec-technologies" />
+                    <Image width={300} height={100} src={blog.imgURL} alt="mohztec-technologies" />
                 </div>
                 <div className="related-blog-title">
                     <p>{blog.title}</p>
@@ -92,9 +94,10 @@ const SingleBlog = async ({ params }) => {
                     <div className="single-blog-main-image">
                         <Image src={item.imgURL} fill alt={item.title} priority={true} />
                     </div>
-                    <h1 className="fw-bold my-3">{item.title}</h1>
+                    <h1 className="fw-bold my-3">Title: {item.title}</h1>
                     <p className="mb-3 fw-bold">Author: {item.author}</p>
-                    <p> {item.description}</p>
+                    <hr />
+                    <div> {parse(item.description)} </div>
                     <div className="comment">
                         <div className="comment-box">
                             <PostComment slug={slug} />

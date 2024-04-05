@@ -4,6 +4,7 @@ import '../admin-blog.scss'
 
 import { useEffect, useRef, useState } from "react"
 import toast from 'react-hot-toast'
+import HtmlTextEditor from '@/components/html-rich-editor/HtmlTextEditor'
 
 const Page = ({ params }) => {
     const { slug } = params
@@ -13,6 +14,7 @@ const Page = ({ params }) => {
             const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/blog/${slug}`, { cache: "no-cache" });
             const { item: data } = await res.json()
             setBlog(data)
+            setDescription(data.description)
         } catch (error) {
             console.log(error);
         }
@@ -25,6 +27,8 @@ const Page = ({ params }) => {
 
     const [isLoading, setLoading] = useState(false)
     const [editImg, setEditImg] = useState("")
+    const [description, setDescription] = useState("")
+
     const imgRef = useRef()
 
     const [blog, setBlog] = useState({})
@@ -71,20 +75,12 @@ const Page = ({ params }) => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const { category, title, author, description, img } = blog
+        const { category, title, author, img } = blog
         if (!category || !title || !author || !description || !img) {
             toast.error("All fields are required!!!")
             return null
         }
 
-        // setBlog({
-        //     category: '',
-        //     title: '',
-        //     img: '',
-        //     description: '',
-        //     author: ''
-        // })
-        // imgRef.current.value = ""
 
 
 
@@ -141,7 +137,10 @@ const Page = ({ params }) => {
                     </label>
                 </div>
                 <input type="text" value={blog.author} name="author" onChange={handleChange} placeholder="Enter Author's name... " />
-                <textarea name="description" value={blog.description} onChange={handleChange} placeholder='Enter Description Post...' />
+
+                {/* <textarea name="description" value={blog.description} onChange={handleChange} placeholder='Enter Description Post...' /> */}
+                <HtmlTextEditor value={description} setDescription={setDescription} />
+
                 <button type="submit" disabled={isLoading} >Submit</button>
             </form >
         </div >

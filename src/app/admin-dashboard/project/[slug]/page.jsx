@@ -3,6 +3,7 @@ import Image from 'next/image'
 import '../admin-project.scss'
 import { useEffect, useRef, useState } from "react"
 import toast from 'react-hot-toast'
+import HtmlTextEditor from '@/components/html-rich-editor/HtmlTextEditor'
 
 const Page = ({ params }) => {
 
@@ -10,6 +11,8 @@ const Page = ({ params }) => {
     const [editImg, setEditImg] = useState("")
     const imgRef = useRef()
     const [project, setProject] = useState({})
+    const [description, setDescription] = useState('')
+
 
     const { slug } = params
     const fetchProject = async (slug) => {
@@ -18,6 +21,7 @@ const Page = ({ params }) => {
             const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/project/${slug}`, { cache: "no-cache" });
             const { item: data } = await res.json()
             setProject(data)
+            setDescription(data.description)
         } catch (error) {
             console.log(error);
         }
@@ -68,7 +72,7 @@ const Page = ({ params }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const { category, title, description, img } = project
+        const { category, title, img } = project
 
         setLoading(true)
         try {
@@ -121,7 +125,8 @@ const Page = ({ params }) => {
                         </select>
                     </label>
                 </div>
-                <textarea name="description" value={project.description} onChange={handleChange} placeholder='Enter Description Post...' />
+                <HtmlTextEditor value={description} setDescription={setDescription} />
+
                 <button type="submit" disabled={isLoading} >Submit</button>
             </form >
         </div >

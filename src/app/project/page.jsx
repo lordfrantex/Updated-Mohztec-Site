@@ -4,6 +4,7 @@ import Image from 'next/image'
 // import BootstrapClient from '../../components/bootstrapClient/BootstrapClient'
 import Link from 'next/link'
 import ProjectOptions from './ProjectOptions'
+import parse from 'html-react-parser';
 
 // console.log("THis is the process", process.env.NEXTAUTH_URL)
 
@@ -49,15 +50,17 @@ const Projects = async ({ searchParams }) => {
                 <div className="project-card container  row align-items-center">
                     <div className="col-12 col-md-6">
                         <div className="">
-                            <p className='title display-5'> Title:{project.title} </p>
-                            <p className='category'> Category: {project.category} </p>
-                            <p>{project.description}</p>
+                            <h2 className='title '> Title:{project.title} </h2>
+                            <p className='category fst-italic'> Category: {project.category} </p>
+
+                            <div className=''> {parse(project.description)} </div>
+
                             {/* <button className='btn mb-3 btn-secondary'>Learn more</button> */}
                         </div>
                     </div>
                     <div className="col-12 col-md-6">
                         <div className=" project-image">
-                            <Image src={project.imgURL} fill alt={project.title} />
+                            <Image src={project.imgURL} fill alt={project.title} objectFit='contain' />
                         </div>
                     </div>
                 </div>

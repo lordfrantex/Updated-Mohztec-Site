@@ -64,7 +64,9 @@ export const SwiperComponent = () => {
                 <SwiperSlide>
                     <Image height={500} width={400} src="/mohztec-images/moses.jpg" />
                 </SwiperSlide>
-
+                <SwiperSlide>
+                    <Image height={500} width={400} src="/mohztec-images/Electrical/IMG_1990.JPG" />
+                </SwiperSlide>
 
             </Swiper>
         </div>

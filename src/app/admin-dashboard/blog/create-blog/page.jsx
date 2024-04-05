@@ -5,6 +5,7 @@ import './create-blog.scss'
 import { useRef, useState } from "react"
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
+import HtmlTextEditor from '@/components/html-rich-editor/HtmlTextEditor'
 const CreateBlog = () => {
     const router = useRouter()
 
@@ -16,10 +17,10 @@ const CreateBlog = () => {
         category: '',
         title: '',
         img: '',
-        description: '',
+        // description: '',
         author: ''
     })
-
+    const [description, setDescription] = useState('')
 
 
 
@@ -67,9 +68,12 @@ const CreateBlog = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        setLoading(true)
+        // setLoading(true)
 
-        const { category, title, author, description, img } = blog
+        const { category, title, author, img } = blog
+        const goat = { ...blog, description }
+        console.log(goat);
+
         if (!category || !title || !author || !description || !img) {
             toast.error("All fields are required!!!")
             return null
@@ -79,7 +83,7 @@ const CreateBlog = () => {
             category: '',
             title: '',
             img: '',
-            description: '',
+            // description: '',
             author: ''
         })
         imgRef.current.value = ""
@@ -91,7 +95,7 @@ const CreateBlog = () => {
                 headers: {
                     'Content-type': 'application/json'
                 },
-                body: JSON.stringify(blog)
+                body: JSON.stringify(goat)
             })
             router.refresh()
 
@@ -132,8 +136,10 @@ const CreateBlog = () => {
                         </select>
                     </label>
                 </div>
+
                 <input type="text" value={blog.author} name="author" onChange={handleChange} placeholder="Enter Author's name... " />
-                <textarea name="description" value={blog.description} onChange={handleChange} placeholder='Enter Description Post...' />
+                <HtmlTextEditor value={description} setDescription={setDescription} />
+
                 <button type="submit" disabled={isLoading} > {isLoading ? "Submitting" : "Submit"}</button>
             </form >
         </div >

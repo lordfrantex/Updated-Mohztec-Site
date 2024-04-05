@@ -5,6 +5,7 @@ import '../admin-project.scss';
 
 import { useState, useEffect } from "react"
 import toast from 'react-hot-toast'
+import HtmlTextEditor from '@/components/html-rich-editor/HtmlTextEditor';
 
 const CreateProject = () => {
 
@@ -25,8 +26,9 @@ const CreateProject = () => {
         category: '',
         title: '',
         img: '',
-        description: '',
+        // description: '',
     })
+    const [description, setDescription] = useState('')
 
 
     const handleChange = e => {
@@ -72,14 +74,14 @@ const CreateProject = () => {
         e.preventDefault()
         setLoading(true)
         try {
-
+            const sendProject = { ...project, description }
             // const res = await fetch('http://localhost:3000/api/project', {
             const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/project`, {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
                 },
-                body: JSON.stringify(project)
+                body: JSON.stringify(sendProject)
             })
 
 
@@ -96,7 +98,7 @@ const CreateProject = () => {
                 category: '',
                 title: '',
                 img: '',
-                description: '',
+                // description: '',
             })
             setLoading(false)
         } catch (error) {
@@ -127,8 +129,8 @@ const CreateProject = () => {
                         </select>
                     </label>
                 </div>
+                <HtmlTextEditor value={description} setDescription={setDescription} />
 
-                <textarea name="description" value={project.description} onChange={handleChange} placeholder='Enter Description...' />
                 <button type="submit" disabled={isLoading}>{isLoading ? "Submitting" : "Submit"}</button>
             </form>
         </div>
