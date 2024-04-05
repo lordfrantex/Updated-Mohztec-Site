@@ -6,6 +6,7 @@ import { useRef, useState } from "react"
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
 import HtmlTextEditor from '@/components/html-rich-editor/HtmlTextEditor'
+
 const CreateBlog = () => {
     const router = useRouter()
 
