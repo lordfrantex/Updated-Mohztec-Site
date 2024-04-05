@@ -11,11 +11,14 @@ const HtmlTextEditor = ({ value, setDescription }) => {
 
     const modules = {
         toolbar: [
-            [{ 'header': [1, 2, false] }],
+            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
             ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-            [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }],
+            // [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }],
+            [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+            [{ 'align': [] }],
             ['link', 'image'],
-            ['clean']
+            ['clean'],
+            [{ 'size': ['small', false, 'large', 'huge'] }]
         ]
     };
 
@@ -34,7 +37,6 @@ const HtmlTextEditor = ({ value, setDescription }) => {
 
     return (
         <div>
-
             <ReactQuill className="quill" id="quill-editor" theme="snow" modules={modules} formats={formats} value={value} onChange={(e) => setDescription(e)} />
         </div>
     )
